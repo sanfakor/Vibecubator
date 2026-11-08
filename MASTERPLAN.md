@@ -390,3 +390,11 @@ Development Guidelines.
 Architecture Decision Records.
 
 VIBECUBATOR – The project remembers. AI contributes. Humans decide.
+
+MASTER PLAN 1.0
+Approved
+VIBECUBATOR
+
+Version 1.0 · November 8, 2026
+
+The binding strategic framework for future development.
