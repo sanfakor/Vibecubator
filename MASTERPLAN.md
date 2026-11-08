@@ -29,10 +29,6 @@ Core principle: The project memory is the source of truth. AI systems are interc
 
 VIBECUBATOR is an independent product.
 
-It is not part of VIBE ROM or any other individual project.
-
-VIBE ROM may later serve as a pilot project developed with VIBECUBATOR.
-
 The framework should support software development, web applications, desktop applications, games, research, automation and other project types.
 
 3. Core principles
@@ -76,7 +72,7 @@ Supports three operating modes.
 
 Browser AI: Manual exchange of structured work orders and results with browser-based AI services.
 
-Local AI: Local model integration, initially using Ollama.
+Local AI: Local model integration.
 
 API AI: External AI providers through official APIs.
 
@@ -331,8 +327,7 @@ Project-specific rules.
 
 Result: A reusable development framework for different project types.
 
-Phase 6 – Pilot projects and product maturity
-Connect VIBE ROM as an independent pilot project.
+Phase 6 – Pilot projects and product maturity.
 Test different project types.
 Improve usability.
 Complete documentation.
