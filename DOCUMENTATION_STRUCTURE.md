@@ -160,7 +160,7 @@ A session is not considered properly completed until its results and remaining w
 
 The following structure defines the intended documentation layout.
 
-text
+```text
 Vibecubator/
 │
 ├── README.md
@@ -198,7 +198,7 @@ Vibecubator/
 │       └── records/
 │
 └── src/
-
+```
 
 This structure represents the intended documentation organization.
 
