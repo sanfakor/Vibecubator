@@ -9,7 +9,7 @@
 **Repository:** https://github.com/sanfakor/Vibecubator
 
 
-1. Vision
+## 1. Vision
 
 VIBECUBATOR is an independent, open-source framework for continuous, structured and AI-assisted project development.
 
@@ -27,13 +27,13 @@ A project is temporarily paused.
 
 Core principle: The project memory is the source of truth. AI systems are interchangeable contributors. The human remains in control.
 
-2. Project independence
+## 2. Project independence
 
 VIBECUBATOR is an independent product.
 
 The framework should support software development, web applications, desktop applications, games, research, automation and other project types.
 
-3. Core principles
+## 3. Core principles
 AI provider independence.
 Flexible operating costs.
 Persistent project memory.
@@ -44,12 +44,12 @@ Human approval of important decisions.
 Reproducible development processes.
 Mandatory AI Session Handover.
 Modular and extensible architecture.
-4. Main system modules
-4.1 Project Manager
+## 4. Main system modules
+## 4.1 Project Manager
 
 Creates, organizes, pauses, resumes and archives projects.
 
-4.2 Project Memory
+## 4.2 Project Memory
 
 Maintains project goals, requirements, architecture, decisions, tasks, test results, problems and historical knowledge.
 
@@ -58,7 +58,7 @@ Project knowledge is divided into:
 Static knowledge.
 Dynamic project state.
 Historical knowledge.
-4.3 Master Planner
+## 4.3 Master Planner
 
 Maintains the planning hierarchy:
 
@@ -68,7 +68,7 @@ Every task has a unique ID, scope, dependencies, expected result, acceptance cri
 
 AI systems may suggest changes, but fundamental planning changes require human approval.
 
-4.4 AI Manager
+## 4.4 AI Manager
 
 Supports three operating modes.
 
@@ -82,7 +82,7 @@ All modes use a common task and result format.
 
 The browser mode must work without API credentials or paid API access.
 
-4.5 Session Manager & AI Session Handover
+## 4.5 Session Manager & AI Session Handover
 
 A mandatory core component.
 
@@ -114,33 +114,33 @@ A session is not considered properly completed until its handover has been gener
 
 A recovery check must identify incomplete work and inconsistencies before a new session starts.
 
-4.6 Development Engine
+## 4.6 Development Engine
 
 Manages Git operations, files, development branches, changes, test execution and task-related modifications.
 
-4.7 Quality Assurance
+## 4.7 Quality Assurance
 
 Checks acceptance criteria, tests, documentation, compatibility, regressions and security requirements.
 
 Unexecuted tests must never be reported as passed.
 
-4.8 Knowledge & Research
+## 4.8 Knowledge & Research
 
 Maintains research results, technical references, sources and hypotheses.
 
 Research findings must remain separate from approved architectural decisions.
 
-4.9 Template & Project Factory
+## 4.9 Template & Project Factory
 
 Provides reusable project templates and configurable workflows for different project types.
 
-4.10 GitHub Integration
+## 4.10 GitHub Integration
 
 Uses GitHub for versioned source code, documentation, commits, branches, issues, milestones and pull requests.
 
 GitHub is the central platform for approved project knowledge.
 
-5. Project memory
+## 5. Project memory
 
 The project memory is the authoritative knowledge base.
 
@@ -160,7 +160,7 @@ The context supplied to an AI should be generated specifically for the current t
 
 The entire project history should not have to be loaded for every interaction.
 
-6. AI Session Handover
+## 6. AI Session Handover
 
 Every development session must leave a structured handover.
 
@@ -183,7 +183,7 @@ Important restrictions.
 
 The handover must be understandable by a different AI provider and by a human returning after a long break.
 
-7. Task and AI exchange standard
+## 7. Task and AI exchange standard
 
 Every work order must define:
 
@@ -205,7 +205,7 @@ Executed tests.
 Unexecuted tests.
 Confirmed findings.
 Unverified hypotheses.
-8. Development and architecture rules
+## 8. Development and architecture rules
 No silent architecture changes.
 No unauthorized changes to the masterplan.
 Every task must have a defined scope.
@@ -219,7 +219,7 @@ Changes must be traceable.
 Important decisions require Architecture Decision Records (ADRs).
 Security-sensitive operations require appropriate safeguards.
 Completed development states must be recoverable.
-9. Technical direction
+## 9. Technical direction
 
 Initial technology proposal:
 
@@ -241,7 +241,7 @@ Final technology decisions must be documented in ADRs.
 
 The first application is planned as a locally operated web application.
 
-10. Data management
+## 10. Data management
 
 GitHub and Git contain the versioned and approved project documentation and source code.
 
@@ -254,7 +254,7 @@ Conflicts must be detected.
 Offline operation must remain possible.
 Credentials must never be committed to public repositories.
 Local and remote project states must be reconcilable.
-11. Security and privacy
+## 11. Security and privacy
 
 VIBECUBATOR is initially designed for local operation.
 
@@ -266,7 +266,7 @@ AI-generated code must not be executed without appropriate safeguards.
 
 Critical changes require appropriate confirmation and traceability.
 
-12. Development roadmap
+## 12. Development roadmap
 Phase 0 – Project foundation
 Approve the masterplan.
 Establish the GitHub repository.
@@ -338,7 +338,7 @@ Prepare public release.
 
 Result: A mature open-source framework.
 
-13. Acceptance and quality criteria
+## 13. Acceptance and quality criteria
 
 A development phase is complete only when:
 
@@ -349,7 +349,7 @@ Documentation is updated.
 Known limitations are recorded.
 A complete handover exists.
 The development state is versioned.
-14. Open-source strategy
+## 14. Open-source strategy
 
 VIBECUBATOR is intended to become an independent open-source product.
 
@@ -357,7 +357,7 @@ The proposed initial license is MIT, subject to final approval before public rel
 
 The project should provide installation instructions, user documentation, developer documentation, contribution guidelines and a transparent development history.
 
-15. Success criteria
+## 15. Success criteria
 
 VIBECUBATOR achieves its primary objective when:
 
@@ -374,7 +374,7 @@ Development progress is verifiable and reproducible.
 
 The ultimate goal: A project must remain continuously developable even when weeks or months pass between sessions and different AI systems contribute to its development.
 
-16. Document governance
+## 16. Document governance
 
 This masterplan defines the strategic foundation of VIBECUBATOR.
 
