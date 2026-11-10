@@ -1,4 +1,12 @@
-VIBECUBATOR – MASTERPLAN
+# VIBECUBATOR – MASTERPLAN
+
+**Version:** 1.0
+**Status:** Approved
+**Created:** 2026-11-08
+**Last Updated:** 2026-11-10
+
+**Project:** VIBECUBATOR
+**Repository:** https://github.com/sanfakor/Vibecubator
 
 Document: Project Foundation & Masterplan
 Version: 1.0
@@ -392,7 +400,6 @@ Architecture Decision Records.
 VIBECUBATOR – The project remembers. AI contributes. Humans decide.
 
 MASTER PLAN 1.0
-Approved
 VIBECUBATOR
 
 Version 1.0 · November 8, 2026
