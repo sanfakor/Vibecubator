@@ -8,12 +8,6 @@
 **Project:** VIBECUBATOR
 **Repository:** https://github.com/sanfakor/Vibecubator
 
-Document: Project Foundation & Masterplan
-Version: 1.0
-Date: 2026-11-08
-Status: Draft – awaiting approval
-Project: VIBECUBATOR
-Repository: https://github.com/sanfakor/Vibecubator
 
 1. Vision
 
@@ -398,10 +392,3 @@ Development Guidelines.
 Architecture Decision Records.
 
 VIBECUBATOR – The project remembers. AI contributes. Humans decide.
-
-MASTER PLAN 1.0
-VIBECUBATOR
-
-Version 1.0 · November 8, 2026
-
-The binding strategic framework for future development.
