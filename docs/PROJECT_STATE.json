@@ -156,13 +156,13 @@
     ]
   },
   "blockers": [
-    "Project Memory specification is incomplete at its beginning: the file starts at section 2.6, so its title, metadata and sections 1–2.5 are absent from the current main-branch file.",
+    "Project Memory specification is incomplete at its beginning: the original creation commit in Git history already starts at section 2.6, so its title, metadata and sections 1–2.5 cannot be recovered from repository history.",
     "DOCUMENTATION_STRUCTURE.md contains contradictory status statements: Draft – Pending Approval in its metadata and section 12, followed by an appended Approved statement.",
     "The revised documentation governance, AI instructions and status standard on this branch require project-owner review before being treated as binding.",
     "Phase 0 technical architecture, Phase 1 requirements/backlog and explicit owner phase-transition approval remain outstanding."
   ],
   "open_decisions": [
-    "Reconstruct or recover the missing beginning of PROJECT_MEMORY_SPECIFICATION.md from Git history or author input, then review the complete specification.",
+    "Git history contains only the original creation commit of PROJECT_MEMORY_SPECIFICATION.md, which already begins at section 2.6. Owner must supply the missing opening or approve a clearly labeled reconstruction.",
     "Confirm the intended approval status and authoritative revision of DOCUMENTATION_STRUCTURE.md.",
     "Approve or revise STATUS_STANDARD.md and AGENTS.md.",
     "Approve Phase 1 architecture through ADRs and define the MVP requirements/backlog.",
