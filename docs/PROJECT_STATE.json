@@ -17,7 +17,7 @@
   "phase_status": "OPEN",
   "next_action": {
     "id": "P0-06",
-    "description": "Review the reconstructed Project Memory specification and owner-feedback proposals (FULL scope; AUTONOMOUS bounded AI execution), revise as needed, and explicitly approve or reject them.",
+    "description": "Review and refine the reconstructed wording of the Project Memory specification. FULL lifecycle scope and AUTONOMOUS bounded AI execution are approved; technical stack and architecture decisions remain separate.",
     "status": "IN_REVIEW",
     "owner_input_required": true
   },
@@ -83,7 +83,7 @@
     {
       "path": "PROJECT_MEMORY_SPECIFICATION.md",
       "classification": "PROPOSED",
-      "notes": "Sections 1 and 2.1–2.5 reconstructed as unapproved draft. Owner feedback incorporated on 2026-11-20 as proposals: FULL lifecycle scope and AUTONOMOUS bounded AI execution. Neither choice nor the specification is approved; explicit owner review is pending."
+      "notes": "Sections 1 and 2.1–2.5 reconstructed; owner approved FULL lifecycle scope and AUTONOMOUS bounded AI execution on 2026-11-20. The reconstructed wording and complete specification remain subject to review; technical stack and architecture are not approved by these decisions."
     },
     {
       "path": "CURRENT_STATUS_AND_NEXT_STEPS.md",
@@ -156,13 +156,13 @@
     ]
   },
   "blockers": [
-    "The reconstructed opening of PROJECT_MEMORY_SPECIFICATION.md is a proposal only and requires owner review and approval before the specification can serve as an approved requirements baseline.",
+    "The reconstructed opening of PROJECT_MEMORY_SPECIFICATION.md remains subject to owner review; FULL scope and AUTONOMOUS bounded execution have been approved.",
     "DOCUMENTATION_STRUCTURE.md contains contradictory status statements: Draft – Pending Approval in its metadata and section 12, followed by an appended Approved statement.",
     "The revised documentation governance, AI instructions and status standard on this branch require project-owner review before being treated as binding.",
     "Phase 0 technical architecture, Phase 1 requirements/backlog and explicit owner phase-transition approval remain outstanding."
   ],
   "open_decisions": [
-    "Review and approve, revise or reject PROJECT_MEMORY_SPECIFICATION.md, including reconstructed sections 1 and 2.1–2.5 and the proposed FULL scope and AUTONOMOUS bounded AI execution model; none is approved yet.",
+    "Review and revise the reconstructed wording in PROJECT_MEMORY_SPECIFICATION.md; the FULL lifecycle scope and AUTONOMOUS bounded AI execution decisions were approved on 2026-11-20.",
     "Confirm the intended approval status and authoritative revision of DOCUMENTATION_STRUCTURE.md.",
     "Approve or revise STATUS_STANDARD.md and AGENTS.md.",
     "Approve Phase 1 architecture through ADRs and define the MVP requirements/backlog.",
