@@ -47,11 +47,11 @@ The proposed stack (Python, FastAPI, React, TypeScript, SQLite, Ollama, pytest) 
 
 ### AUD-01 — Incomplete Project Memory specification
 
-The main-branch file began at section 2.6. Its only Git history entry is the initial creation commit (2026-11-08), and that original blob also begins at section 2.6; no earlier complete version was available. On the working branch, sections 1 and 2.1–2.5 have now been reconstructed as a clearly labeled, unapproved draft based on the approved Masterplan and surviving sections 2.6–14. The original missing wording is not claimed or implied.
+The main-branch file began at section 2.6. Its only Git history entry is the initial creation commit (2026-11-08), and that original blob also begins at section 2.6; no earlier complete version was available. On the working branch, sections 1 and 2.1–2.5 have been reconstructed as a clearly labeled, unapproved draft based on the approved Masterplan and surviving sections 2.6–14. Owner feedback dated 2026-11-20 has also been incorporated as unapproved proposals: FULL lifecycle scope and AUTONOMOUS bounded AI execution. The original missing wording is not claimed or implied; neither proposal is an approval.
 
 **Impact:** The reconstructed opening is not original source text and does not make the specification approved. Do not derive final implementation requirements from it until the owner has reviewed the complete document.
 
-**Required action:** Owner reviews, revises and explicitly approves or rejects the reconstructed sections 1 and 2.1–2.5. If original source text later becomes available, compare it and reconcile the differences.
+**Required action:** Owner reviews, revises and explicitly approves or rejects the reconstructed sections 1 and 2.1–2.5, the FULL lifecycle scope proposal and the AUTONOMOUS bounded-execution proposal. If original source text later becomes available, compare it and reconcile the differences.
 
 ### AUD-02 — Conflicting documentation-structure approval
 
@@ -97,7 +97,7 @@ This audit establishes the contents of the complete returned main-branch tree an
 
 ## 7. Recommended next sequence
 
-1. Review, revise and explicitly approve or reject the reconstructed opening of `PROJECT_MEMORY_SPECIFICATION.md`.
+1. Review, revise and explicitly approve or reject the reconstructed opening and the proposed FULL scope / AUTONOMOUS bounded-execution model in `PROJECT_MEMORY_SPECIFICATION.md`.
 2. Resolve the approval ambiguity in `DOCUMENTATION_STRUCTURE.md`.
 3. Review and approve the proposed status standard and `AGENTS.md`.
 4. Define Phase 1 architecture and ADRs without treating the proposed stack as approved.
