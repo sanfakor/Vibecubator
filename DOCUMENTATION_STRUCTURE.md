@@ -32,7 +32,7 @@ The following precedence applies by information domain, not as a blanket ranking
 | Documentation responsibilities | `DOCUMENTATION_STRUCTURE.md` |
 | Persistent knowledge requirements | `PROJECT_MEMORY_SPECIFICATION.md` |
 | Phase exit criteria | `docs/PHASE_0_CHECKLIST.md` and later phase-specific criteria |
-| Technical decisions | Approved ADRs in `docs/architecture/decisions/` |
+| Technical decisions | Approved ADRs in `docs/architecture/decisions/`; proposals remain explicitly unapproved |
 | Session-level history and handover | Individual records in `docs/sessions/` when introduced |
 
 Actual source code, Git history and executed test output are evidence about implementation. They do not silently amend approved requirements or decisions.
