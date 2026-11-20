@@ -103,3 +103,21 @@ This audit establishes the contents of the complete returned main-branch tree an
 4. Define Phase 1 architecture and ADRs without treating the proposed stack as approved.
 5. Specify Phase 1 MVP requirements, acceptance criteria and dependency-ordered backlog.
 6. Complete all Phase 0 checklist criteria and obtain explicit owner approval before implementation.
+
+
+## 8. Follow-up and disposition — 2026-11-20
+
+Pull Request #1 was merged by the repository owner (merge commit `510a3e7a3aa558e0d3e7b124f59fe9baff08013a`). Its documentation-governance baseline, status standard and AI operating rules are therefore recorded as approved in the current project state.
+
+The owner subsequently explicitly approved:
+- Project Memory scope: `FULL`.
+- AI autonomy: `AUTONOMOUS`, within the bounded execution rules in `PROJECT_MEMORY_SPECIFICATION.md`.
+
+These approvals apply to the two decisions, not to every reconstructed sentence in the specification, any technology choice, Phase 1 architecture or the Phase 0 transition.
+
+The original audit inventory and commit reference above remain a historical snapshot of the audited pre-standardization main commit; they must not be interpreted as a current repository inventory. Follow-up planning artifacts are now maintained in:
+- `docs/architecture/PHASE_1_ARCHITECTURE_OPTIONS.md`
+- `docs/requirements/PHASE_1_MVP_REQUIREMENTS.md`
+- `docs/planning/PHASE_1_BACKLOG.md`
+
+No Phase 1 application implementation has been started.
