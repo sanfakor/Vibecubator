@@ -151,7 +151,9 @@
               "MISSING",
               "UNKNOWN",
               "DEPRECATED",
-              "SUPERSEDED"
+              "SUPERSEDED",
+              "ARCHIVED",
+              "REJECTED"
             ]
           },
           "evidence": {
@@ -190,7 +192,9 @@
               "MISSING",
               "UNKNOWN",
               "DEPRECATED",
-              "SUPERSEDED"
+              "SUPERSEDED",
+              "ARCHIVED",
+              "REJECTED"
             ]
           },
           "notes": {
