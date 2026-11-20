@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "id": "VIBECUBATOR",
+    "name": "VIBECUBATOR",
+    "purpose": "AI-assisted framework for continuous, structured, traceable project development across interchangeable AI systems."
+  },
+  "repository": {
+    "url": "https://github.com/sanfakor/Vibecubator",
+    "default_branch": "main",
+    "working_branch": "chore/project-state-standard",
+    "last_verified_commit": "7f0449cefc33d2a8a4299ee3572314f4ceae642f"
+  },
+  "updated_at": "2026-11-20T10:25:00+01:00",
+  "overall_status": "OPEN",
+  "current_phase": "Phase 0 — Project Foundation",
+  "phase_status": "OPEN",
+  "next_action": {
+    "id": "P0-01",
+    "description": "Complete a full repository and history audit on the working branch; reconcile all documentation and gather evidence for each Phase 0 exit criterion.",
+    "status": "READY",
+    "owner_input_required": false
+  },
+  "implementation": [
+    {
+      "area": "Product vision and strategic direction",
+      "classification": "APPROVED",
+      "evidence": [
+        "MASTERPLAN.md"
+      ],
+      "notes": "Masterplan 1.0 is marked approved."
+    },
+    {
+      "area": "Documentation governance",
+      "classification": "APPROVED",
+      "evidence": [
+        "DOCUMENTATION_STRUCTURE.md",
+        "docs/STATUS_STANDARD.md",
+        "AGENTS.md"
+      ],
+      "notes": "Documentation authority and AI operating rules established in this branch; pending review/merge."
+    },
+    {
+      "area": "Project Memory application",
+      "classification": "PROPOSED",
+      "evidence": [
+        "PROJECT_MEMORY_SPECIFICATION.md",
+        "MASTERPLAN.md"
+      ],
+      "notes": "Specification describes intended capabilities; no executable implementation verified."
+    },
+    {
+      "area": "Application source code",
+      "classification": "MISSING",
+      "evidence": [
+        "Repository tree at 7f0449cefc33d2a8a4299ee3572314f4ceae642f"
+      ],
+      "notes": "Inspected tree contains only Markdown documentation and docs directory; no source files observed."
+    },
+    {
+      "area": "Automated test suite",
+      "classification": "MISSING",
+      "evidence": [
+        "Repository tree at 7f0449cefc33d2a8a4299ee3572314f4ceae642f"
+      ],
+      "notes": "No test files or test configuration observed in inspected tree; tests not run."
+    }
+  ],
+  "documentation": [
+    {
+      "path": "README.md",
+      "classification": "DOCUMENTED"
+    },
+    {
+      "path": "MASTERPLAN.md",
+      "classification": "APPROVED"
+    },
+    {
+      "path": "DOCUMENTATION_STRUCTURE.md",
+      "classification": "APPROVED"
+    },
+    {
+      "path": "PROJECT_MEMORY_SPECIFICATION.md",
+      "classification": "PROPOSED",
+      "notes": "Document identifies itself as Draft – Pending Approval."
+    },
+    {
+      "path": "CURRENT_STATUS_AND_NEXT_STEPS.md",
+      "classification": "SUPERSEDED",
+      "notes": "Historical handover retained for traceability."
+    },
+    {
+      "path": "docs/CURRENT_STATUS.md",
+      "classification": "SUPERSEDED",
+      "notes": "Compatibility pointer to canonical status."
+    },
+    {
+      "path": "AGENTS.md",
+      "classification": "APPROVED"
+    },
+    {
+      "path": "docs/STATUS_STANDARD.md",
+      "classification": "APPROVED"
+    },
+    {
+      "path": "docs/PROJECT_STATE.json",
+      "classification": "DOCUMENTED"
+    },
+    {
+      "path": "docs/PROJECT_STATE.schema.json",
+      "classification": "DOCUMENTED"
+    },
+    {
+      "path": "docs/PHASE_0_CHECKLIST.md",
+      "classification": "DOCUMENTED"
+    },
+    {
+      "path": "docs/planning/DEVELOPMENT_ROADMAP.md",
+      "classification": "DOCUMENTED"
+    }
+  ],
+  "verification": {
+    "repository_inventory": "PARTIAL",
+    "tests": [
+      {
+        "name": "Automated tests",
+        "status": "NOT_RUN",
+        "evidence": "No test suite was present in the inspected repository tree."
+      },
+      {
+        "name": "JSON Schema validation",
+        "status": "NOT_RUN",
+        "evidence": "Schema and state file added; validation has not yet been executed."
+      }
+    ]
+  },
+  "blockers": [
+    "Phase 0 exit criteria have not all been evidenced.",
+    "Owner approval for Phase 0 completion and Phase 1 transition is pending.",
+    "Repository audit is limited to the inspected recursive tree and selected documents; full historical/configuration audit remains."
+  ],
+  "open_decisions": [
+    "Approve or revise PROJECT_MEMORY_SPECIFICATION.md.",
+    "Evaluate and approve Phase 1 technical architecture through ADRs.",
+    "Confirm Phase 1 MVP requirements and actionable task backlog."
+  ],
+  "risks": [
+    "Conflicting historical status documents may reappear if contributors bypass the canonical status files.",
+    "The current state is based on a partial repository audit; do not interpret uninspected areas as absent."
+  ],
+  "owner_approvals": [
+    {
+      "subject": "Phase 0 completion and authorization to begin Phase 1",
+      "status": "PENDING"
+    }
+  ]
+}
