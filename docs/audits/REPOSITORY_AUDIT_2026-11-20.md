@@ -47,11 +47,11 @@ The proposed stack (Python, FastAPI, React, TypeScript, SQLite, Ollama, pytest) 
 
 ### AUD-01 — Incomplete Project Memory specification
 
-The main-branch file begins at section 2.6. The title/metadata, opening purpose and sections 2.1–2.5 are absent from the inspected blob. The file's only Git history entry is its initial creation commit (2026-11-08), and that original blob also begins at section 2.6; no earlier complete version is available in the repository history. The remaining content describes knowledge classification, lifecycle, retrieval, multi-AI contribution and logical information modeling, but the missing beginning prevents a complete specification review.
+The main-branch file began at section 2.6. Its only Git history entry is the initial creation commit (2026-11-08), and that original blob also begins at section 2.6; no earlier complete version was available. On the working branch, sections 1 and 2.1–2.5 have now been reconstructed as a clearly labeled, unapproved draft based on the approved Masterplan and surviving sections 2.6–14. The original missing wording is not claimed or implied.
 
-**Impact:** Do not approve or derive complete implementation requirements from this incomplete file.
+**Impact:** The reconstructed opening is not original source text and does not make the specification approved. Do not derive final implementation requirements from it until the owner has reviewed the complete document.
 
-**Required action:** Git history has been checked and contains no earlier complete version. Ask the owner to supply the missing original text or approve a clearly labeled reconstruction based on the surviving specification and Masterplan.
+**Required action:** Owner reviews, revises and explicitly approves or rejects the reconstructed sections 1 and 2.1–2.5. If original source text later becomes available, compare it and reconcile the differences.
 
 ### AUD-02 — Conflicting documentation-structure approval
 
@@ -83,7 +83,7 @@ No code, tests, CI workflow, license or contribution/developer setup files are p
 |---|---|---|
 | Product vision | APPROVED / DOCUMENTED | `MASTERPLAN.md` |
 | Roadmap phases 0–6 | APPROVED / DOCUMENTED | `MASTERPLAN.md` |
-| Project Memory specification | PARTIALLY DOCUMENTED | File begins at section 2.6 |
+| Project Memory specification | PROPOSED / PENDING OWNER REVIEW | Sections 1 and 2.1–2.5 reconstructed as an unapproved draft; surviving sections retained |
 | Documentation governance | CONFLICTED / NEEDS OWNER REVIEW | Contradictory status statements |
 | Technical stack | PROPOSED | Masterplan section 9 |
 | Application implementation | MISSING in audited tree | Complete tree listing |
@@ -97,7 +97,7 @@ This audit establishes the contents of the complete returned main-branch tree an
 
 ## 7. Recommended next sequence
 
-1. Recover/reconstruct the missing opening of `PROJECT_MEMORY_SPECIFICATION.md` and obtain owner review.
+1. Review, revise and explicitly approve or reject the reconstructed opening of `PROJECT_MEMORY_SPECIFICATION.md`.
 2. Resolve the approval ambiguity in `DOCUMENTATION_STRUCTURE.md`.
 3. Review and approve the proposed status standard and `AGENTS.md`.
 4. Define Phase 1 architecture and ADRs without treating the proposed stack as approved.
