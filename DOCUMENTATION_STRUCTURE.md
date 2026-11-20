@@ -60,6 +60,7 @@ Vibecubator/
     ├── architecture/
     │   ├── PHASE_1_ARCHITECTURE_OPTIONS.md
     │   └── decisions/
+    │       ├── README.md
     │       ├── ADR-0001-application-shape-and-runtime.md
     │       ├── ADR-0002-backend-and-frontend-stack.md
     │       ├── ADR-0003-persistence-and-data-ownership.md
