@@ -47,11 +47,11 @@ The proposed stack (Python, FastAPI, React, TypeScript, SQLite, Ollama, pytest) 
 
 ### AUD-01 — Incomplete Project Memory specification
 
-The main-branch file began at section 2.6. Its only Git history entry is the initial creation commit (2026-11-08), and that original blob also begins at section 2.6; no earlier complete version was available. On the working branch, sections 1 and 2.1–2.5 have been reconstructed as a clearly labeled, unapproved draft based on the approved Masterplan and surviving sections 2.6–14. Owner feedback dated 2026-11-20 has also been incorporated as unapproved proposals: FULL lifecycle scope and AUTONOMOUS bounded AI execution. The original missing wording is not claimed or implied; neither proposal is an approval.
+The main-branch file began at section 2.6. Its only Git history entry is the initial creation commit (2026-11-08), and that original blob also begins at section 2.6; no earlier complete version was available. On the working branch, sections 1 and 2.1–2.5 have been reconstructed as a clearly labeled, unapproved draft based on the approved Masterplan and surviving sections 2.6–14. Owner decisions dated 2026-11-20 approved FULL lifecycle scope and AUTONOMOUS bounded AI execution. The original missing wording is not claimed or implied; approval of those decisions does not validate every reconstructed passage.
 
-**Impact:** The reconstructed opening is not original source text and does not make the specification approved. Do not derive final implementation requirements from it until the owner has reviewed the complete document.
+**Impact:** The reconstructed opening is not original source text. The FULL scope and AUTONOMOUS bounded-execution decisions are approved, while the reconstructed wording remains subject to review.
 
-**Required action:** Owner reviews, revises and explicitly approves or rejects the reconstructed sections 1 and 2.1–2.5, the FULL lifecycle scope proposal and the AUTONOMOUS bounded-execution proposal. If original source text later becomes available, compare it and reconcile the differences.
+**Required action:** Review and refine reconstructed sections 1 and 2.1–2.5. The owner-approved FULL scope and AUTONOMOUS bounded-execution decisions remain authoritative unless changed through the project decision process. If original source text later becomes available, compare it and reconcile the differences.
 
 ### AUD-02 — Conflicting documentation-structure approval
 
@@ -83,7 +83,7 @@ No code, tests, CI workflow, license or contribution/developer setup files are p
 |---|---|---|
 | Product vision | APPROVED / DOCUMENTED | `MASTERPLAN.md` |
 | Roadmap phases 0–6 | APPROVED / DOCUMENTED | `MASTERPLAN.md` |
-| Project Memory specification | PROPOSED / PENDING OWNER REVIEW | Sections 1 and 2.1–2.5 reconstructed as an unapproved draft; surviving sections retained |
+| Project Memory specification | PARTIALLY APPROVED / DOCUMENTATION REVIEW OPEN | FULL scope and AUTONOMOUS bounded execution approved 2026-11-20; reconstructed wording remains subject to review |
 | Documentation governance | CONFLICTED / NEEDS OWNER REVIEW | Contradictory status statements |
 | Technical stack | PROPOSED | Masterplan section 9 |
 | Application implementation | MISSING in audited tree | Complete tree listing |
@@ -97,7 +97,7 @@ This audit establishes the contents of the complete returned main-branch tree an
 
 ## 7. Recommended next sequence
 
-1. Review, revise and explicitly approve or reject the reconstructed opening and the proposed FULL scope / AUTONOMOUS bounded-execution model in `PROJECT_MEMORY_SPECIFICATION.md`.
+1. Review and refine the reconstructed opening of `PROJECT_MEMORY_SPECIFICATION.md`; FULL scope and AUTONOMOUS bounded execution are approved.
 2. Resolve the approval ambiguity in `DOCUMENTATION_STRUCTURE.md`.
 3. Review and approve the proposed status standard and `AGENTS.md`.
 4. Define Phase 1 architecture and ADRs without treating the proposed stack as approved.
