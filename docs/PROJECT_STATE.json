@@ -118,6 +118,11 @@
     {
       "path": "docs/planning/DEVELOPMENT_ROADMAP.md",
       "classification": "DOCUMENTED"
+    },
+    {
+      "path": "docs/audits/REPOSITORY_AUDIT_2026-11-20.md",
+      "classification": "DOCUMENTED",
+      "notes": "Evidence-based inventory and documentation gap audit of the complete main-branch tree."
     }
   ],
   "verification": {
