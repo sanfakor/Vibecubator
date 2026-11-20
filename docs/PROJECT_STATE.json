@@ -8,10 +8,10 @@
   "repository": {
     "url": "https://github.com/sanfakor/Vibecubator",
     "default_branch": "main",
-    "working_branch": "chore/phase-0-next-steps",
+    "working_branch": "docs/architecture-adrs",
     "last_verified_commit": "d08b55bea357135512129a084f15328992f59e12"
   },
-  "updated_at": "2026-11-20T11:00:53Z",
+  "updated_at": "2026-11-20T11:01:22Z",
   "overall_status": "OPEN",
   "current_phase": "Phase 0 — Project Foundation",
   "phase_status": "OPEN",
