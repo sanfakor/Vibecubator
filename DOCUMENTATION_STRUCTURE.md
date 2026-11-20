@@ -57,13 +57,18 @@ Vibecubator/
     ├── DOCUMENTATION_RULES.md
     ├── PHASE_0_CHECKLIST.md
     ├── CURRENT_STATUS.md               # compatibility pointer
+    ├── architecture/
+    │   └── PHASE_1_ARCHITECTURE_OPTIONS.md
     ├── audits/
     │   └── REPOSITORY_AUDIT_2026-11-20.md
-    └── planning/
-        └── DEVELOPMENT_ROADMAP.md
+    ├── planning/
+    │   ├── DEVELOPMENT_ROADMAP.md
+    │   └── PHASE_1_BACKLOG.md
+    └── requirements/
+        └── PHASE_1_MVP_REQUIREMENTS.md
 ```
 
-Future documents may be added under `docs/project/`, `docs/architecture/`, `docs/development/` and `docs/sessions/` when the relevant work is approved and sufficiently defined.
+Future documents may be added under `docs/project/`, `docs/architecture/`, `docs/development/` and `docs/sessions/` when the relevant work is approved and sufficiently defined. Phase 1 architecture options, MVP requirements and backlog are currently proposals under `docs/architecture/`, `docs/requirements/` and `docs/planning/`.
 
 ## 5. Status model
 
