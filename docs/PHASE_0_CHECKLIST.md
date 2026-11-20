@@ -5,17 +5,17 @@
 
 | ID | Exit criterion | Evidence required | Status |
 |---|---|---|---|
-| P0-01 | Complete repository inventory | Full file tree, branch/commit state, history review, code/config/test scan | DONE — complete tree (7 files), 15 commits and 2 branches inspected; see audit report |
-| P0-02 | Documentation authority approved | Canonical document map and conflict rules | IN_REVIEW — original document has contradictory approval statements; owner clarification required |
-| P0-03 | AI operating governance exists | Reviewed `AGENTS.md` | IN_REVIEW |
-| P0-04 | Current status is machine- and human-readable | Valid JSON state plus matching human status | IN_REVIEW — schema validation pending |
-| P0-05 | Masterplan remains authoritative | Owner-approved Masterplan 1.0; changes controlled | DONE — existing document marked approved |
-| P0-06 | Project Memory requirements reviewed | Specification approval or documented revision | IN_REVIEW — reconstructed opening plus proposed FULL scope and AUTONOMOUS bounded AI execution; all remain unapproved pending owner review |
-| P0-07 | Technical architecture sufficiently defined | Architecture proposal and approved ADRs for Phase 1 | OPEN |
-| P0-08 | Phase 1 MVP scope defined | Requirements, exclusions, measurable acceptance criteria | OPEN |
-| P0-09 | Phase 1 backlog actionable | Ordered tasks with IDs, dependencies, files/components, acceptance and verification | OPEN |
-| P0-10 | Risks and unresolved decisions recorded | Current state and decision log | IN_REVIEW |
-| P0-11 | Owner approves phase transition | Explicit recorded approval after review of all evidence | OPEN |
+| P0-01 | Complete repository inventory | Full file tree, branch/commit state, history review, code/config/test scan | DONE — baseline audit recorded; follow-up inventory refreshed in this workstream |
+| P0-02 | Documentation authority approved | Canonical document map and conflict rules | DONE — approved documentation structure baseline in `DOCUMENTATION_STRUCTURE.md`; owner-merged PR #1 |
+| P0-03 | AI operating governance exists | Reviewed `AGENTS.md` | DONE — approved operating baseline; owner-merged PR #1 |
+| P0-04 | Current status is machine- and human-readable | Valid JSON state plus matching human status and schema validation | IN_REVIEW — state and human projection synchronized; full JSON Schema validation still required |
+| P0-05 | Masterplan remains authoritative | Owner-approved Masterplan 1.0; changes controlled | DONE — existing document marked approved; no changes made |
+| P0-06 | Project Memory requirements reviewed | Specification review and decision status documented | IN_REVIEW — FULL scope and AUTONOMOUS bounded execution approved; reconstructed wording remains subject to review |
+| P0-07 | Technical architecture sufficiently defined | Architecture options, approved ADRs and evidence for Phase 1 | IN_REVIEW — architecture options prepared; owner decisions and ADR approvals remain open |
+| P0-08 | Phase 1 MVP scope defined | Requirements, exclusions, measurable acceptance criteria | IN_REVIEW — proposed MVP requirements prepared; owner review required |
+| P0-09 | Phase 1 backlog actionable | Ordered tasks with IDs, dependencies, acceptance and verification | IN_REVIEW — proposed dependency-ordered backlog prepared; estimates and priorities require review |
+| P0-10 | Risks and unresolved decisions recorded | Current state and decision log | IN_REVIEW — risks and open decisions recorded in canonical state and planning documents |
+| P0-11 | Owner approves phase transition | Explicit recorded approval after review of all evidence | OPEN — owner gate; not delegated to AI |
 
 ## Completion rule
 
@@ -23,8 +23,8 @@ Phase 0 is COMPLETE only when P0-01 through P0-10 are DONE with linked evidence,
 
 ## Current assessment
 
-The complete non-truncated main-branch tree contains seven tracked files: six root-level Markdown documents and one legacy status document under docs/. The repository history contains 15 commits and two branches were returned. No application source, build/package configuration, test suite, CI workflow, license file, ADRs or Phase 1 requirements were present in the inspected main tree. The audit is recorded in [Repository Audit](audits/REPOSITORY_AUDIT_2026-11-20.md).
+The repository now contains the project-status standard, AI operating rules, canonical project state, project-memory specification, audit, roadmap and Phase 1 planning proposals. No application source, executable build or automated application test suite has been verified. The Masterplan's proposed technology stack remains unapproved until recorded in ADRs.
 
 ## Next action
 
-Review and resolve P0-06, including the FULL scope and AUTONOMOUS execution proposals, then reconcile all existing documents against the canonical status and prepare the Phase 1 architecture/MVP package without implementing the application.
+Review `docs/architecture/PHASE_1_ARCHITECTURE_OPTIONS.md`, decide the open architecture questions and approve the corresponding ADRs. Then review the MVP requirements and backlog. Do not begin application implementation before Phase 0 is complete and the owner approves the transition.
