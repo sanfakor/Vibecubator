@@ -1,6 +1,6 @@
 # VIBECUBATOR — Development Roadmap
 
-**Status:** DOCUMENTED — phases derive from approved Masterplan 1.0; detailed scope remains subject to approval.
+**Status:** DOCUMENTED — phase sequence derives from approved Masterplan 1.0; detailed scope and gates remain subject to their respective approvals.
 
 | Phase | Objective | Expected outcome | Current status |
 |---|---|---|---|
@@ -10,11 +10,19 @@
 | 3 — AI Manager | Common task/result format, browser workflow, local/API adapters and context generation | Provider-independent AI collaboration | NOT_STARTED |
 | 4 — Development Engine & QA | Controlled Git/file operations, test execution, quality checks and approval workflows | Traceable and verifiable AI-assisted changes | NOT_STARTED |
 | 5 — Project Factory | Templates and configurable project workflows | Reusable project initialization | NOT_STARTED |
+| 6 — Pilot Projects & Product Maturity | Test different project types, improve usability, complete documentation and evaluate stability/extensibility | Mature open-source framework prepared for public release | NOT_STARTED |
+
+## Phase 0 and Phase 1 planning references
+
+- [Phase 0 Exit Checklist](../PHASE_0_CHECKLIST.md)
+- [Phase 1 Architecture Options](../architecture/PHASE_1_ARCHITECTURE_OPTIONS.md)
+- [Phase 1 MVP Requirements](../requirements/PHASE_1_MVP_REQUIREMENTS.md)
+- [Phase 1 Proposed Backlog](PHASE_1_BACKLOG.md)
 
 ## Planning constraints
 
-- Phase 0 must be approved before Phase 1 implementation.
-- Phase 1 should remain independent of AI-provider integration.
-- Proposed technology choices in the Masterplan are not final technical decisions; record approved choices in ADRs.
+- Phase 0 must be completed and explicitly approved by the owner before Phase 1 implementation.
+- Phase 1 must remain independent of AI-provider integration.
+- Technology choices in the Masterplan are initial proposals, not final technical decisions; record approved choices in ADRs.
 - Each phase must have its own scope, dependencies, deliverables, measurable acceptance criteria and exit gate before implementation starts.
-- Update this roadmap only when the approved plan changes; update current progress in `docs/PROJECT_STATE.json`.
+- Update current progress in `docs/PROJECT_STATE.json`; update this roadmap only when the approved plan changes.

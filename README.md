@@ -22,7 +22,7 @@ Read these documents in order:
 6. [Documentation Structure](DOCUMENTATION_STRUCTURE.md) — document responsibilities and authority.
 7. [Phase 0 Checklist](docs/PHASE_0_CHECKLIST.md) — foundation exit criteria.
 8. [Development Roadmap](docs/planning/DEVELOPMENT_ROADMAP.md) — phases and intended outcomes.
-9. [Repository Audit](docs/audits/REPOSITORY_AUDIT_2026-11-20.md) — inspected tree, history and documentation findings.
+9. [Phase 1 Architecture Options](docs/architecture/PHASE_1_ARCHITECTURE_OPTIONS.md) — options and decisions awaiting ADR approval.\n10. [Phase 1 MVP Requirements](docs/requirements/PHASE_1_MVP_REQUIREMENTS.md) — proposed scope and acceptance criteria.\n11. [Phase 1 Backlog](docs/planning/PHASE_1_BACKLOG.md) — proposed dependency-ordered work.\n12. [Repository Audit](docs/audits/REPOSITORY_AUDIT_2026-11-20.md) — historical baseline audit and follow-up disposition.
 
 ## Project status
 

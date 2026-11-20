@@ -1,37 +1,38 @@
 # VIBECUBATOR — Current Project Status
 
-**Last verified:** 2026-11-20  
+**Last verified:** 2026-11-20T10:44:23.835Z
 **Overall status:** OPEN  
 **Current phase:** Phase 0 — Project Foundation  
 **Phase status:** OPEN  
-**Working branch:** `chore/project-state-standard`
+**Working branch:** `chore/phase-0-next-steps`
 
 ## Current reality
 
-VIBECUBATOR is in its foundation and planning phase. The approved strategic direction is recorded in `MASTERPLAN.md`. The complete inspected main-branch tree contains documentation only; no executable application implementation has been verified.
+VIBECUBATOR remains in its foundation and planning phase. The owner-approved strategic direction is recorded in `MASTERPLAN.md`. The repository contains specifications and governance documentation, but no executable application implementation or automated test suite has been verified.
 
-The canonical machine-readable state is [`docs/PROJECT_STATE.json`](docs/PROJECT_STATE.json). Status vocabulary and evidence rules are defined in [`docs/STATUS_STANDARD.md`](docs/STATUS_STANDARD.md). AI contributors must follow [`AGENTS.md`](AGENTS.md).
+The canonical machine-readable state is [`docs/PROJECT_STATE.json`](docs/PROJECT_STATE.json). This document is its human-readable projection. Both must be updated together.
 
-## Verified repository inventory
+## Owner-approved decisions
 
-- Main branch at `7f0449cefc33d2a8a4299ee3572314f4ceae642f`: seven tracked files in the complete non-truncated tree.
-- Git history: 15 commits returned.
-- Branches: `main` and `chore/project-state-standard`.
-- No application source, package/build configuration, test suite, CI workflow, license file, ADRs or Phase 1 requirements were present in the inspected main tree.
-- Detailed evidence and limitations: [Repository Audit](docs/audits/REPOSITORY_AUDIT_2026-11-20.md).
+- Project Memory scope: **FULL** — complete project lifecycle.
+- AI autonomy: **AUTONOMOUS**, bounded by approved task scope, permissions, acceptance criteria, safety limits and stop conditions.
+- Documentation governance baseline, status standard and AI operating rules were included in owner-merged PR #1.
 
-## Important findings
+These approvals do not approve every reconstructed passage, a technology stack, architecture ADRs, Phase 1 requirements or the Phase 0 → Phase 1 transition.
 
-- `MASTERPLAN.md` defines Phase 0 through Phase 6. Phase 6 — Pilot Projects and Product Maturity — has been restored to the proposed roadmap.
-- `PROJECT_MEMORY_SPECIFICATION.md` began at section 2.6 in the original main-branch file. Sections 1 and 2.1–2.5 have been reconstructed as PROPOSED / RECONSTRUCTED, not original text. Owner feedback is now incorporated as unapproved proposals: FULL lifecycle scope and AUTONOMOUS bounded AI execution. The complete specification still requires owner review and explicit approval.
-- `DOCUMENTATION_STRUCTURE.md` contains conflicting approval statements in the original main-branch version: Draft/Pending Approval and a later appended Approved statement.
-- The proposed governance and status standard on this branch require owner review.
-- The proposed technology stack remains unapproved until documented in ADRs.
+## Prepared for Phase 1 review
+
+- [Architecture options](docs/architecture/PHASE_1_ARCHITECTURE_OPTIONS.md) — alternatives and decisions requiring owner input.
+- [MVP requirements](docs/requirements/PHASE_1_MVP_REQUIREMENTS.md) — proposed scope and acceptance criteria.
+- [Phase 1 backlog](docs/planning/PHASE_1_BACKLOG.md) — proposed dependency-ordered work packages.
+- [Phase 0 checklist](docs/PHASE_0_CHECKLIST.md) — remaining evidence and approval gates.
+
+The roadmap has been reconciled with the approved Masterplan and now explicitly contains Phases 0–6.
 
 ## Next action
 
-Review and revise the reconstructed Project Memory specification, including the proposed FULL scope and AUTONOMOUS bounded AI execution model; explicitly approve or reject these proposals before treating them as authoritative. Then reconcile the remaining documentation conflicts and prepare the Phase 1 architecture and MVP package. Do not begin application implementation before the Phase 0 checklist is complete and the project owner approves the transition.
+Review the architecture options and decide the unresolved technology, deployment, data and GitHub synchronization questions. Record approved choices in ADRs. Then review the MVP requirements and backlog. These planning documents remain proposals and are not implementation authorization.
 
-## Verification limitations
+## Implementation gate
 
-The recursive main-branch tree was complete and non-truncated, and the returned history contains 15 commits. No automated project tests exist in the inspected tree. The project-state JSON parses and required top-level fields are present, but full JSON Schema validation has not been executed.
+Do not begin Phase 1 application implementation while Phase 0 is OPEN. Phase 0 can close only after every mandatory checklist criterion is evidenced and the owner explicitly approves the transition.
