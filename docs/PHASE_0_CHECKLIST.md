@@ -5,10 +5,10 @@
 
 | ID | Exit criterion | Evidence required | Status |
 |---|---|---|---|
-| P0-01 | Complete repository inventory | Full file tree, branch/commit state, history review, code/config/test scan | DONE — baseline audit recorded; follow-up inventory refreshed in this workstream |
+| P0-01 | Complete repository inventory | Full file tree, branch/commit state, history review, code/config/test scan | IN_REVIEW — baseline audit is complete; final recursive inventory of the expanded working branch remains to be recorded |
 | P0-02 | Documentation authority approved | Canonical document map and conflict rules | DONE — approved documentation structure baseline in `DOCUMENTATION_STRUCTURE.md`; owner-merged PR #1 |
 | P0-03 | AI operating governance exists | Reviewed `AGENTS.md` | DONE — approved operating baseline; owner-merged PR #1 |
-| P0-04 | Current status is machine- and human-readable | Valid JSON state plus matching human status and schema validation | IN_REVIEW — state and human projection synchronized; full JSON Schema validation still required |
+| P0-04 | Current status is machine- and human-readable | Valid JSON state plus matching human status and schema validation | DONE — JSON syntax and declared schema constraints validated; human projection and checklist synchronized |
 | P0-05 | Masterplan remains authoritative | Owner-approved Masterplan 1.0; changes controlled | DONE — existing document marked approved; no changes made |
 | P0-06 | Project Memory requirements reviewed | Specification review and decision status documented | IN_REVIEW — FULL scope and AUTONOMOUS bounded execution approved; reconstructed wording remains subject to review |
 | P0-07 | Technical architecture sufficiently defined | Architecture options, approved ADRs and evidence for Phase 1 | IN_REVIEW — architecture options prepared; owner decisions and ADR approvals remain open |
