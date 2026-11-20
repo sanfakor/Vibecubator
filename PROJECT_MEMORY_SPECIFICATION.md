@@ -1,3 +1,116 @@
+# VIBECUBATOR — Project Memory Specification
+
+> **Reconstruction notice — PROPOSED / RECONSTRUCTED**
+>
+> Sections 1 and 2.1–2.5 were missing from the repository's original file and could not be recovered from Git history. The text below is a newly reconstructed draft based on the approved `MASTERPLAN.md` and the surviving sections 2.6–14. It is **not original source text and is not owner-approved**. Review, revise or reject it before treating this specification as authoritative.
+>
+> **Document status:** Draft — reconstructed opening pending owner review
+> **Version:** 1.0 (reconstructed opening added on 2026-11-20; surviving sections retained)
+> **Project:** VIBECUBATOR
+> **Source basis:** `MASTERPLAN.md` (approved, version 1.0) and surviving content of this document from section 2.6 onward
+>
+> **Interpretation rule:** Where this reconstruction adds detail not explicitly stated in the source documents, it is a proposal for review, not an approved project decision. In particular, it does not approve a technical stack or implementation architecture.
+
+## 1. Purpose and Scope
+
+### 1.1 Purpose
+
+The Project Memory is the persistent, structured knowledge foundation of VIBECUBATOR. Its purpose is to preserve a project's direction, context, decisions and development history so that work can continue reliably across separated development sessions, long pauses and interchangeable AI systems.
+
+It provides a consistent source of project context for humans and AI contributors. It should make the current state understandable, support evidence-based continuation and reduce repeated work caused by lost or fragmented context.
+
+The Project Memory supports the VIBECUBATOR principle:
+
+**The project remembers. AI contributes. Humans decide.**
+
+### 1.2 Scope
+
+The Project Memory is intended to maintain and make retrievable the knowledge required to plan, develop, operate and maintain a project. This includes, at minimum:
+
+- Project identity, vision, objectives and scope.
+- Requirements, constraints and acceptance criteria.
+- Approved decisions and their rationale.
+- Architecture and technical knowledge, including known limitations.
+- Tasks, milestones, dependencies and current working state.
+- Session outcomes, handovers, discoveries and unresolved issues.
+- Test evidence and references to implemented changes.
+- Relevant external knowledge together with its source.
+
+The Project Memory must support both relatively stable project knowledge and information that changes during active development. The surviving sections of this specification define the knowledge categories, lifecycle, retrieval, logical model, security considerations and minimum functional expectations in more detail.
+
+### 1.3 Boundaries
+
+This specification defines logical responsibilities and requirements for Project Memory. It does not by itself define or approve the complete VIBECUBATOR application architecture, user interface, database technology, indexing engine, embedding model or AI-provider integration.
+
+The approved Masterplan remains the strategic authority. Detailed technical choices must be evaluated separately and recorded through the project's decision process, including Architecture Decision Records where appropriate.
+
+The Project Memory is not intended to make AI-generated content authoritative merely because it has been stored. Provenance, status, review and human approval remain essential.
+
+### 1.4 Intended Users and Contributors
+
+The Project Memory is intended for:
+
+- The human project owner, who retains authority over project direction and important approvals.
+- Human developers and maintainers who need a reliable view of project knowledge and state.
+- AI systems and specialized agents that retrieve context, analyze work, propose changes or execute explicitly assigned tasks.
+- Supporting software components that validate, index, synchronize or present project information.
+
+Different contributors may interact with the same knowledge base, but their permissions and the authority of their contributions must remain distinguishable.
+
+## 2. Fundamental Principles
+
+The following principles establish the conceptual foundation for the Project Memory. The detailed requirements in later sections refine these principles.
+
+### 2.1 Persistent Project Continuity
+
+Project knowledge must remain available beyond the lifetime of an individual conversation, AI session or development environment.
+
+The Project Memory must preserve enough context to allow work to resume after interruptions and to allow a different human or AI contributor to understand the project's purpose, current state, relevant history and next steps.
+
+A session ending, a change of AI provider or a long period of inactivity must not cause the project to lose its established direction or essential knowledge.
+
+The memory should distinguish durable knowledge from time-sensitive working state and historical records. Current state must be identifiable without discarding the history needed to understand how that state was reached.
+
+### 2.2 One Authoritative Project Record and Clear Human Authority
+
+The Project Memory must provide a coherent and traceable representation of project knowledge. It must not create competing, silently divergent sources of truth.
+
+In accordance with the approved Masterplan, version-controlled project documentation and source code in GitHub/Git form the authoritative project record for approved project information. Operational stores, indexes, caches and AI context packages may support access and processing, but must not silently supersede that record.
+
+The human project owner retains final authority over project direction, fundamental requirements and important architectural or planning decisions. AI systems may analyze, recommend and prepare changes; they must not independently approve their own proposals or redefine approved project fundamentals.
+
+Where authority or approval status is unclear, the information must be treated as unresolved and surfaced for review rather than guessed.
+
+### 2.3 AI- and Provider-Independent Collaboration
+
+The Project Memory must be usable by different AI systems, models, providers and specialized agents without making project continuity dependent on one particular service.
+
+Contributors should receive task-relevant context in a consistent, structured form and should return findings and proposed changes in a form that can be evaluated and traced.
+
+An AI system's identity, provider or apparent confidence does not make its output authoritative. Contributions must remain attributable where possible and must be evaluated against evidence, requirements and approved decisions before they are accepted as persistent approved knowledge.
+
+The Project Memory should support collaboration between multiple contributors while preserving the distinction between independent contributions, consolidated proposals and approved project knowledge.
+
+### 2.4 Provenance, Traceability and Verifiable State
+
+Important project information must retain its origin and, where available, references to the source from which it was derived. This may include repository paths, commits, requirement or task identifiers, session references, external URLs and timestamps.
+
+Changes to important knowledge must be traceable. A reviewer should be able to understand what changed, why it changed, who or what proposed the change, what evidence supports it and whether it was approved.
+
+Statements about implementation and verification must reflect observable evidence. A proposal must not be represented as implemented; an implementation must not be represented as tested or verified unless the relevant checks were actually performed and their results recorded.
+
+Where evidence is missing, incomplete or uncertain, that limitation must be explicit.
+
+### 2.5 Controlled Knowledge Lifecycle and Human Review
+
+Project knowledge must be managed through an explicit lifecycle rather than treated as an undifferentiated collection of notes.
+
+New information may be proposed, reviewed, approved, superseded, deprecated, rejected or archived as appropriate to its category. Temporary working information and AI-generated suggestions must not silently become approved persistent knowledge.
+
+Changes that affect approved requirements, project fundamentals, architecture or strategic direction require the appropriate human review and approval. Routine factual corrections and maintenance may follow documented governance rules, but must remain traceable.
+
+Conflicts, uncertainty and missing evidence must be exposed rather than silently resolved by an AI system. Previous approved states and their history must remain recoverable in accordance with the controlled-evolution rules defined below.
+
 2.6 Controlled Evolution
 
 The Project Memory must evolve in a controlled and traceable manner.
