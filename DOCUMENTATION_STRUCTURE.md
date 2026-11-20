@@ -58,7 +58,13 @@ Vibecubator/
     ├── PHASE_0_CHECKLIST.md
     ├── CURRENT_STATUS.md               # compatibility pointer
     ├── architecture/
-    │   └── PHASE_1_ARCHITECTURE_OPTIONS.md
+    │   ├── PHASE_1_ARCHITECTURE_OPTIONS.md
+    │   └── decisions/
+    │       ├── ADR-0001-application-shape-and-runtime.md
+    │       ├── ADR-0002-backend-and-frontend-stack.md
+    │       ├── ADR-0003-persistence-and-data-ownership.md
+    │       ├── ADR-0004-git-sync-and-conflict-handling.md
+    │       └── ADR-0005-local-security-and-credentials.md
     ├── audits/
     │   └── REPOSITORY_AUDIT_2026-11-20.md
     ├── planning/
