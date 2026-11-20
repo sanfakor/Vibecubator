@@ -22,6 +22,7 @@ Read these documents in order:
 6. [Documentation Structure](DOCUMENTATION_STRUCTURE.md) — document responsibilities and authority.
 7. [Phase 0 Checklist](docs/PHASE_0_CHECKLIST.md) — foundation exit criteria.
 8. [Development Roadmap](docs/planning/DEVELOPMENT_ROADMAP.md) — phases and intended outcomes.
+9. [Repository Audit](docs/audits/REPOSITORY_AUDIT_2026-11-20.md) — inspected tree, history and documentation findings.
 
 ## Project status
 
