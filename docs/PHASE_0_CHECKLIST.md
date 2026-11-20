@@ -10,7 +10,7 @@
 | P0-03 | AI operating governance exists | Reviewed `AGENTS.md` | IN_REVIEW |
 | P0-04 | Current status is machine- and human-readable | Valid JSON state plus matching human status | IN_REVIEW — schema validation pending |
 | P0-05 | Masterplan remains authoritative | Owner-approved Masterplan 1.0; changes controlled | DONE — existing document marked approved |
-| P0-06 | Project Memory requirements reviewed | Specification approval or documented revision | BLOCKED — source file begins at section 2.6; missing opening content must be recovered or reconstructed |
+| P0-06 | Project Memory requirements reviewed | Specification approval or documented revision | IN_REVIEW — sections 1 and 2.1–2.5 reconstructed as a clearly labeled draft; owner review and approval/revision required |
 | P0-07 | Technical architecture sufficiently defined | Architecture proposal and approved ADRs for Phase 1 | OPEN |
 | P0-08 | Phase 1 MVP scope defined | Requirements, exclusions, measurable acceptance criteria | OPEN |
 | P0-09 | Phase 1 backlog actionable | Ordered tasks with IDs, dependencies, files/components, acceptance and verification | OPEN |
@@ -27,4 +27,4 @@ The complete non-truncated main-branch tree contains seven tracked files: six ro
 
 ## Next action
 
-Complete P0-01 on this branch, then reconcile all existing documents against the canonical status and prepare the Phase 1 architecture/MVP package without implementing the application.
+Review and resolve P0-06, then reconcile all existing documents against the canonical status and prepare the Phase 1 architecture/MVP package without implementing the application.
