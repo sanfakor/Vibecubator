@@ -8,16 +8,16 @@
   "repository": {
     "url": "https://github.com/sanfakor/Vibecubator",
     "default_branch": "main",
-    "working_branch": "chore/project-state-standard",
-    "last_verified_commit": "7f0449cefc33d2a8a4299ee3572314f4ceae642f"
+    "working_branch": "chore/phase-0-next-steps",
+    "last_verified_commit": "510a3e7a3aa558e0d3e7b124f59fe9baff08013a"
   },
-  "updated_at": "2026-11-20",
+  "updated_at": "2026-11-20T10:40:46.974Z",
   "overall_status": "OPEN",
   "current_phase": "Phase 0 — Project Foundation",
   "phase_status": "OPEN",
   "next_action": {
-    "id": "P0-06",
-    "description": "Review the reconstructed Project Memory specification and owner-feedback proposals (FULL scope; AUTONOMOUS bounded AI execution), revise as needed, and explicitly approve or reject them.",
+    "id": "P0-07",
+    "description": "Review the Phase 1 architecture options and decide the unresolved technology, deployment, data and GitHub synchronization questions; then approve the corresponding ADRs.",
     "status": "IN_REVIEW",
     "owner_input_required": true
   },
@@ -32,13 +32,13 @@
     },
     {
       "area": "Documentation governance",
-      "classification": "DOCUMENTED",
+      "classification": "APPROVED",
       "evidence": [
         "DOCUMENTATION_STRUCTURE.md",
         "docs/STATUS_STANDARD.md",
         "AGENTS.md"
       ],
-      "notes": "Proposed governance updates are in this branch. The original DOCUMENTATION_STRUCTURE.md had conflicting approval statements; owner review remains necessary."
+      "notes": "Documentation governance baseline, status standard and AI operating rules were included in owner-merged PR #1 (merge commit 510a3e7). The documentation map is maintained in DOCUMENTATION_STRUCTURE.md."
     },
     {
       "area": "Project Memory application",
@@ -47,7 +47,7 @@
         "PROJECT_MEMORY_SPECIFICATION.md",
         "MASTERPLAN.md"
       ],
-      "notes": "Specification describes intended capabilities; no executable implementation verified."
+      "notes": "FULL lifecycle scope and AUTONOMOUS bounded AI execution approved by owner on 2026-11-20; complete specification wording remains under review. No executable implementation verified."
     },
     {
       "area": "Application source code",
@@ -78,12 +78,12 @@
     {
       "path": "DOCUMENTATION_STRUCTURE.md",
       "classification": "APPROVED",
-      "notes": "Original main-branch document had conflicting Draft/Pending Approval and appended Approved statements; branch revision awaits owner review."
+      "notes": "Version 1.1 structure baseline included in owner-merged PR #1; status normalized in this follow-up."
     },
     {
       "path": "PROJECT_MEMORY_SPECIFICATION.md",
       "classification": "PROPOSED",
-      "notes": "Sections 1 and 2.1–2.5 reconstructed as unapproved draft. Owner feedback incorporated on 2026-11-20 as proposals: FULL lifecycle scope and AUTONOMOUS bounded AI execution. Neither choice nor the specification is approved; explicit owner review is pending."
+      "notes": "FULL scope and AUTONOMOUS bounded execution approved 2026-11-20. Reconstructed sections 1 and 2.1–2.5 remain non-original wording and subject to review; complete specification is not blanket-approved."
     },
     {
       "path": "CURRENT_STATUS_AND_NEXT_STEPS.md",
@@ -97,11 +97,11 @@
     },
     {
       "path": "AGENTS.md",
-      "classification": "PROPOSED"
+      "classification": "APPROVED"
     },
     {
       "path": "docs/STATUS_STANDARD.md",
-      "classification": "PROPOSED"
+      "classification": "APPROVED"
     },
     {
       "path": "docs/PROJECT_STATE.json",
@@ -123,6 +123,18 @@
       "path": "docs/audits/REPOSITORY_AUDIT_2026-11-20.md",
       "classification": "DOCUMENTED",
       "notes": "Evidence-based inventory and documentation gap audit of the complete main-branch tree."
+    },
+    {
+      "path": "docs/requirements/PHASE_1_MVP_REQUIREMENTS.md",
+      "classification": "PROPOSED"
+    },
+    {
+      "path": "docs/planning/PHASE_1_BACKLOG.md",
+      "classification": "PROPOSED"
+    },
+    {
+      "path": "docs/architecture/PHASE_1_ARCHITECTURE_OPTIONS.md",
+      "classification": "PROPOSED"
     }
   ],
   "verification": {
@@ -156,30 +168,50 @@
     ]
   },
   "blockers": [
-    "The reconstructed opening of PROJECT_MEMORY_SPECIFICATION.md is a proposal only and requires owner review and approval before the specification can serve as an approved requirements baseline.",
-    "DOCUMENTATION_STRUCTURE.md contains contradictory status statements: Draft – Pending Approval in its metadata and section 12, followed by an appended Approved statement.",
-    "The revised documentation governance, AI instructions and status standard on this branch require project-owner review before being treated as binding.",
-    "Phase 0 technical architecture, Phase 1 requirements/backlog and explicit owner phase-transition approval remain outstanding."
+    "Reconstructed sections 1 and 2.1–2.5 of PROJECT_MEMORY_SPECIFICATION.md are not original source text; the approved FULL scope and AUTONOMOUS execution model do not constitute blanket approval of this wording.",
+    "Phase 1 architecture decisions remain open: technology stack, local deployment/runtime, data model boundaries, GitHub synchronization and conflict handling require approved ADRs.",
+    "Phase 1 MVP requirements and backlog are prepared as proposals and require owner review before implementation.",
+    "Phase 0 cannot close until all checklist evidence is complete and the owner explicitly approves the transition."
   ],
   "open_decisions": [
-    "Review and approve, revise or reject PROJECT_MEMORY_SPECIFICATION.md, including reconstructed sections 1 and 2.1–2.5 and the proposed FULL scope and AUTONOMOUS bounded AI execution model; none is approved yet.",
-    "Confirm the intended approval status and authoritative revision of DOCUMENTATION_STRUCTURE.md.",
-    "Approve or revise STATUS_STANDARD.md and AGENTS.md.",
-    "Approve Phase 1 architecture through ADRs and define the MVP requirements/backlog.",
-    "Confirm Phase 6 remains part of the approved Masterplan roadmap (preserved in the corrected roadmap)."
+    "Review the reconstructed wording in PROJECT_MEMORY_SPECIFICATION.md; FULL lifecycle scope and AUTONOMOUS bounded execution are approved.",
+    "Confirm the Phase 1 architecture through ADRs: language/framework, frontend approach, persistence, local runtime, GitHub synchronization and conflict strategy.",
+    "Review and approve the proposed Phase 1 MVP requirements, exclusions and measurable acceptance criteria.",
+    "Review and approve the dependency-ordered Phase 1 backlog and its estimates/priorities.",
+    "Explicitly approve the Phase 0 to Phase 1 transition after all exit criteria are evidenced."
   ],
   "risks": [
-    "An incomplete Project Memory specification cannot safely serve as a complete requirements baseline.",
-    "Conflicting approval metadata in the original documentation structure can cause AI agents to apply inconsistent governance.",
-    "The repository has no visible automated validation workflow, source code, test suite or license file; this is consistent with its foundation phase but must be addressed before implementation/release."
+    "The reconstructed Project Memory opening may not match the unrecoverable original wording; its decisions are approved but the text remains reviewable.",
+    "Prematurely fixing the technology stack could constrain the product before architecture trade-offs are evaluated.",
+    "GitHub synchronization and local persistence need explicit conflict, offline and recovery behavior to avoid divergent project records.",
+    "Autonomous execution increases the importance of scoped permissions, audit trails, secret handling and explicit stop conditions.",
+    "No application code or automated test suite exists yet; implementation readiness must not be claimed."
   ],
   "owner_approvals": [
+    {
+      "subject": "Project Memory scope = FULL",
+      "status": "APPROVED",
+      "date": "2026-11-20",
+      "evidence": "Explicit owner approval in conversation; recorded in PROJECT_MEMORY_SPECIFICATION.md."
+    },
+    {
+      "subject": "AI autonomy = AUTONOMOUS within bounded task scopes",
+      "status": "APPROVED",
+      "date": "2026-11-20",
+      "evidence": "Explicit owner approval in conversation; bounded execution rules retained in PROJECT_MEMORY_SPECIFICATION.md."
+    },
+    {
+      "subject": "Documentation governance baseline, STATUS_STANDARD.md and AGENTS.md",
+      "status": "APPROVED",
+      "date": "2026-11-20",
+      "evidence": "Owner-merged Pull Request #1, merge commit 510a3e7a3aa558e0d3e7b124f59fe9baff08013a."
+    },
     {
       "subject": "Phase 0 completion and authorization to begin Phase 1",
       "status": "PENDING"
     },
     {
-      "subject": "Review and approve STATUS_STANDARD.md and AGENTS.md",
+      "subject": "Phase 1 architecture ADRs and MVP requirements/backlog",
       "status": "PENDING"
     }
   ]
