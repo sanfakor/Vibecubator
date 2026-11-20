@@ -116,26 +116,6 @@ Conflicts, uncertainty and missing evidence must be exposed rather than silently
 The approved operating model is `AUTONOMOUS`: AI agents should be able to carry out assigned work end-to-end within an explicitly approved task scope, including analysis, planning, implementation, routine corrections, testing and evidence collection. Autonomy is bounded by approved requirements, permissions, budgets, security constraints, acceptance criteria and stop conditions. It does not grant agents authority to approve their own changes to project fundamentals, requirements, architecture, security policy, scope or other reserved decisions.
 
 
-### 2.9 Bounded Autonomous AI Execution — APPROVED
-
-The autonomy level `AUTONOMOUS` was approved by the project owner on 2026-11-20. This defines the target operating model; it is not authorization to act outside the permissions and task scope actually granted in a given environment.
-
-Within an approved task, an AI agent should be able to independently:
-
-- Inspect relevant project context and evidence, identify dependencies and formulate an execution plan.
-- Make routine, task-scoped and reversible changes to code, tests and documentation.
-- Run available checks, diagnose failures, iterate and collect verifiable evidence.
-- Update task progress, working state and handover information.
-- Prepare a concise completion report describing changes, test results, limitations and remaining risks.
-
-Autonomous execution must remain within explicit task boundaries: approved objective, affected areas, permitted actions, acceptance criteria, resource/time limits, data-access permissions and stop conditions. Agents must stop and request human direction when scope is ambiguous or exceeded, evidence conflicts with approved requirements, security/privacy risk is elevated, destructive or externally consequential action is required, or a reserved decision is encountered.
-
-The following remain human-reserved unless the owner explicitly establishes a narrower, documented delegation policy: changing project vision or scope; approving or changing fundamental requirements; approving architecture or technology decisions; changing security, privacy or access policy; accepting material cost, legal, safety or irreversible risks; and granting an agent new permissions. An agent must never approve its own proposal or mark a human approval as granted.
-
-Routine execution within a previously approved task may proceed without per-edit approval. Changes and outcomes must nevertheless be traceable, reviewable and reversible where practical. Where repository policy or the execution environment requires pull requests, protected branches or other controls, those controls remain binding. A successful test run is evidence of the checks performed, not automatic approval of the change.
-
-`AUTONOMOUS` therefore means maximum delegated execution inside approved boundaries — not unrestricted self-direction, self-authorization or exemption from governance.
-
 2.6 Controlled Evolution
 
 The Project Memory must evolve in a controlled and traceable manner.
@@ -170,6 +150,27 @@ The Project Memory must use structured information that can be processed by diff
 However, the specification must not mandate a particular database, indexing engine, embedding model or search technology.
 
 The logical structure and requirements must remain independent of the eventual technical implementation.
+
+
+### 2.9 Bounded Autonomous AI Execution — APPROVED
+
+The autonomy level `AUTONOMOUS` was approved by the project owner on 2026-11-20. This defines the target operating model; it is not authorization to act outside the permissions and task scope actually granted in a given environment.
+
+Within an approved task, an AI agent should be able to independently:
+
+- Inspect relevant project context and evidence, identify dependencies and formulate an execution plan.
+- Make routine, task-scoped and reversible changes to code, tests and documentation.
+- Run available checks, diagnose failures, iterate and collect verifiable evidence.
+- Update task progress, working state and handover information.
+- Prepare a concise completion report describing changes, test results, limitations and remaining risks.
+
+Autonomous execution must remain within explicit task boundaries: approved objective, affected areas, permitted actions, acceptance criteria, resource/time limits, data-access permissions and stop conditions. Agents must stop and request human direction when scope is ambiguous or exceeded, evidence conflicts with approved requirements, security/privacy risk is elevated, destructive or externally consequential action is required, or a reserved decision is encountered.
+
+The following remain human-reserved unless the owner explicitly establishes a narrower, documented delegation policy: changing project vision or scope; approving or changing fundamental requirements; approving architecture or technology decisions; changing security, privacy or access policy; accepting material cost, legal, safety or irreversible risks; and granting an agent new permissions. An agent must never approve its own proposal or mark a human approval as granted.
+
+Routine execution within a previously approved task may proceed without per-edit approval. Changes and outcomes must nevertheless be traceable, reviewable and reversible where practical. Where repository policy or the execution environment requires pull requests, protected branches or other controls, those controls remain binding. A successful test run is evidence of the checks performed, not automatic approval of the change.
+
+`AUTONOMOUS` therefore means maximum delegated execution inside approved boundaries — not unrestricted self-direction, self-authorization or exemption from governance.
 
 3. Knowledge Classification
 
@@ -456,7 +457,7 @@ The system must not assume that agreement between multiple AI systems automatica
 
 6.5 Human Oversight
 
-Important project decisions and changes to approved project fundamentals must remain subject to human approval. This remains true under the proposed AUTONOMOUS execution model.
+Important project decisions and changes to approved project fundamentals must remain subject to human approval. This remains true under the approved, bounded AUTONOMOUS execution model.
 
 AI systems may analyze, recommend and prepare changes.
 
