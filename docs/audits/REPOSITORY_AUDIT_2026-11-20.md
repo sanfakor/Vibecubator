@@ -47,11 +47,11 @@ The proposed stack (Python, FastAPI, React, TypeScript, SQLite, Ollama, pytest) 
 
 ### AUD-01 — Incomplete Project Memory specification
 
-The main-branch file begins at section 2.6. The title/metadata, opening purpose and sections 2.1–2.5 are absent from the inspected blob. The remaining content describes knowledge classification, lifecycle, retrieval, multi-AI contribution and logical information modeling, but the missing beginning prevents a complete specification review.
+The main-branch file begins at section 2.6. The title/metadata, opening purpose and sections 2.1–2.5 are absent from the inspected blob. The file's only Git history entry is its initial creation commit (2026-11-08), and that original blob also begins at section 2.6; no earlier complete version is available in the repository history. The remaining content describes knowledge classification, lifecycle, retrieval, multi-AI contribution and logical information modeling, but the missing beginning prevents a complete specification review.
 
 **Impact:** Do not approve or derive complete implementation requirements from this incomplete file.
 
-**Required action:** Recover missing content from Git history if it exists; otherwise ask the owner to supply or approve a reconstructed opening.
+**Required action:** Git history has been checked and contains no earlier complete version. Ask the owner to supply the missing original text or approve a clearly labeled reconstruction based on the surviving specification and Masterplan.
 
 ### AUD-02 — Conflicting documentation-structure approval
 
