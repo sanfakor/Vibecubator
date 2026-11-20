@@ -9,17 +9,17 @@
     "url": "https://github.com/sanfakor/Vibecubator",
     "default_branch": "main",
     "working_branch": "docs/architecture-adrs",
-    "last_verified_commit": "1be95d2784c53cdd88a48d1561e092297143fee6"
+    "last_verified_commit": "4959946aede94be43c466b7427a2a566924b71fe"
   },
-  "updated_at": "2026-11-20T11:23:32Z",
+  "updated_at": "2026-11-20T12:00:00Z",
   "overall_status": "OPEN",
-  "current_phase": "Phase 0 — Project Foundation",
+  "current_phase": "Phase 1 — Project Memory MVP",
   "phase_status": "OPEN",
   "next_action": {
-    "id": "P0-11",
-    "description": "Owner reviews completed Phase 0 evidence and explicitly approves or declines the transition to Phase 1.",
-    "status": "IN_REVIEW",
-    "owner_input_required": true
+    "id": "P1-001",
+    "description": "Establish the reproducible repository and developer environment baseline for the approved local-web-first, cross-platform stack.",
+    "status": "READY",
+    "owner_input_required": false
   },
   "implementation": [
     {
@@ -217,16 +217,12 @@
       }
     ]
   },
-  "blockers": [
-    "Phase 0 → Phase 1 transition awaits explicit owner approval (P0-11).",
-    "Phase 1 implementation is not authorized while Phase 0 remains OPEN."
-  ],
+  "blockers": [],
   "open_decisions": [
     "Select and security-review concrete GitHub authentication flow and least-privilege permission manifest before enabling remote writes.",
     "Specify canonical file layouts and detailed schemas for project, phase, milestone, task and decision records before domain-model implementation.",
     "Select frontend build/test tooling and platform packaging after P1-001 and vertical-slice proof of concept.",
-    "Verify Linux Secret Service availability; credential-dependent actions must fail closed without plaintext fallback.",
-    "Owner must explicitly approve or decline the Phase 0 → Phase 1 transition after reviewing evidence."
+    "Verify Linux Secret Service availability; credential-dependent actions must fail closed without plaintext fallback."
   ],
   "risks": [
     "Project Memory opening is reconstructed rather than original source text; approval is recorded and provenance notice must remain.",
@@ -281,8 +277,9 @@
     },
     {
       "subject": "Phase 0 completion and authorization to begin Phase 1",
-      "status": "PENDING",
-      "evidence": "P0-11 requires explicit owner approval after review of Phase 0 evidence."
+      "status": "APPROVED",
+      "date": "2026-11-20",
+      "evidence": "Explicit owner message in this conversation: “ja ich gebe ihn frei”. Recorded as approval of P0-11 and the Phase 0 → Phase 1 transition."
     }
   ]
 }

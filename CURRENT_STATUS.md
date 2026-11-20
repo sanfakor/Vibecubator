@@ -1,15 +1,15 @@
 # VIBECUBATOR — Current Project Status
 
-**Last updated:** 2026-11-20T11:23:32Z  
+**Last updated:** 2026-11-20T12:00:00Z  
 **Overall status:** OPEN  
-**Current phase:** Phase 0 — Project Foundation  
+**Current phase:** Phase 1 — Project Memory MVP  
 **Phase status:** OPEN  
 **Working branch:** `docs/architecture-adrs`
 
 ## Current reality
-The Phase 0 foundation and Phase 1 planning baseline have been reviewed and consolidated. ADR-0001 through ADR-0005 are accepted; the Project Memory reconstruction and Phase 1 MVP scope are approved. The complete recursive inventory of the working branch is recorded in `docs/audits/PHASE_0_EXIT_REVIEW_2026-11-20.md`.
+**Phase 0 is COMPLETE.** All eleven exit criteria are recorded as DONE, including the explicit owner approval of the transition on 2026-11-20. Phase 1 — Project Memory MVP is now authorized.
 
-No executable application or automated application test suite exists in the inspected repository tree. Phase 1 implementation remains prohibited until the owner explicitly approves the phase transition.
+The project is at the start of Phase 1; this is not a claim that application code has already been implemented. The inspected repository contains planning and governance documentation, but no application source or automated application test suite.
 
 The canonical machine-readable state is [`docs/PROJECT_STATE.json`](docs/PROJECT_STATE.json). This document is its human-readable projection. Both must be updated together.
 
@@ -23,18 +23,19 @@ The canonical machine-readable state is [`docs/PROJECT_STATE.json`](docs/PROJECT
 - Git workflow: controlled, user-triggered operations on one configured branch; preview and explicit confirmation before commit, push or applying remote fast-forward changes (ADR-0004).
 - Security/platforms: Windows, macOS and Linux; OS-native credential store, loopback-only service and installation-specific secret (ADR-0005).
 - Phase 1 MVP: tasks and milestones included; single-user local installation; portable import/export included.
+- Phase 0 → Phase 1 transition: explicitly approved by the owner on 2026-11-20.
 
 ## Phase 1 planning baseline
 - [ADR index](docs/architecture/decisions/README.md) — ADR-0001 through ADR-0005 accepted.
 - [MVP requirements](docs/requirements/PHASE_1_MVP_REQUIREMENTS.md) — approved scope and acceptance criteria.
 - [Phase 1 backlog](docs/planning/PHASE_1_BACKLOG.md) — 15 dependency-ordered work packages; effort estimates deferred.
-- [Phase 0 checklist](docs/PHASE_0_CHECKLIST.md) — P0-01 through P0-10 DONE; P0-11 OPEN.
+- [Phase 0 checklist](docs/PHASE_0_CHECKLIST.md) — COMPLETE; P0-01 through P0-11 DONE.
 
 ## Remaining implementation-level decisions
-The concrete GitHub authentication flow and permission manifest, canonical record schemas, frontend build/test tools, platform packaging and Linux credential-provider availability must be resolved before their corresponding work packages.
+Resolve GitHub authentication and least-privilege permissions before enabling remote writes; define canonical file layouts and schemas before domain-model implementation; select frontend tooling and platform packaging after the initial proof of concept; verify Linux secure credential-provider availability. These do not block starting P1-001.
 
 ## Next action
-**P0-11 — Owner review:** review the Phase 0 evidence and explicitly approve or decline the Phase 0 → Phase 1 transition.
+**P1-001 — Repository and developer environment baseline.** Establish reproducible setup and verification commands for the approved cross-platform stack before implementing product features.
 
 ## Implementation gate
-Phase 0 remains OPEN until the owner explicitly approves P0-11. Do not begin Phase 1 implementation before that approval.
+Phase 1 implementation is authorized by the owner's recorded approval. Continue to follow each backlog item's Definition of Ready, permissions, acceptance criteria and stop conditions. Do not enable remote writes or weaken the approved security boundaries without the required design and review.

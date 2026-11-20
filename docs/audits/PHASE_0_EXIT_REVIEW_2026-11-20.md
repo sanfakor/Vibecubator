@@ -4,7 +4,7 @@
 **Audited branch:** `docs/architecture-adrs`  
 **Audited commit:** `1be95d2784c53cdd88a48d1561e092297143fee6`  
 **Inventory result:** COMPLETE — recursive tree response was not truncated  
-**Phase result:** P0-01 through P0-10 evidenced; P0-11 remains an owner decision
+**Phase result:** P0-01 through P0-11 DONE; Phase 0 COMPLETE
 
 ## 1. Recursive repository inventory
 
@@ -68,7 +68,10 @@ The reconstructed text is not original recovered wording. Its provenance notice 
 | P0-08 MVP scope | DONE | Owner-approved requirements and exclusions |
 | P0-09 Actionable backlog | DONE | 15 work packages with dependencies and acceptance evidence; estimates deferred |
 | P0-10 Risks/open decisions | DONE | Residual implementation decisions and risks recorded |
-| P0-11 Owner phase-transition approval | OPEN | Must be explicitly granted by the owner; not delegated to AI |
+| P0-11 Owner phase-transition approval | DONE | Explicit owner approval in conversation on 2026-11-20; recorded in canonical owner_approvals |
 
-## 6. Conclusion
-Evidence supports marking P0-01 through P0-10 DONE. **Phase 0 remains OPEN** because P0-11 requires the owner's explicit decision. Phase 1 implementation is not authorized by this review or by acceptance of planning artifacts. The next action is owner review and explicit approval or rejection of the Phase 0 → Phase 1 transition.
+## 6. Owner phase-transition approval
+On 2026-11-20, after reviewing the Phase 0 exit evidence, the owner explicitly approved the Phase 0 → Phase 1 transition (“ja ich gebe ihn frei”). This is the P0-11 approval. It is recorded in `docs/PROJECT_STATE.json` under `owner_approvals` and reflected in the completed checklist and current status.
+
+## 7. Conclusion
+P0-01 through P0-11 are DONE. **Phase 0 is COMPLETE.** Phase 1 — Project Memory MVP is authorized. This approval authorizes Phase 1 work under the accepted scope, ADRs, permissions and stop conditions; it does not claim that the application is implemented or tested. The next action is P1-001, establishing the reproducible repository and developer environment baseline.
