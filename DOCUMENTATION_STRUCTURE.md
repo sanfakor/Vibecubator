@@ -57,6 +57,8 @@ Vibecubator/
     ├── DOCUMENTATION_RULES.md
     ├── PHASE_0_CHECKLIST.md
     ├── CURRENT_STATUS.md               # compatibility pointer
+    ├── audits/
+    │   └── REPOSITORY_AUDIT_2026-11-20.md
     └── planning/
         └── DEVELOPMENT_ROADMAP.md
 ```
