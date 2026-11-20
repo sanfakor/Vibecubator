@@ -72,3 +72,19 @@ Each ADR must contain context, decision drivers, alternatives, consequences, sta
 ## 7. Recommended next action
 
 The owner reviews the candidate architecture and confirms the deployment shape, technology preferences and synchronization behavior. After that, prepare ADRs with concrete trade-offs and request explicit approval. No code or dependency selection should be based solely on this proposal.
+
+
+## 8. Owner decision — hybrid application shape
+
+On 2026-11-20, the project owner explicitly selected the **hybrid direction: local web application as the initial foundation, with a desktop application remaining a possible later delivery option**.
+
+This selection is recorded as accepted in [ADR-0001](decisions/ADR-0001-application-shape-and-runtime.md). It resolves the deployment-shape question only. It does not approve a specific backend/frontend stack, persistence model, synchronization policy, credential strategy or Phase 1 implementation.
+
+The remaining architecture decisions are prepared as proposals:
+
+- [ADR-0002 — Backend and frontend stack](decisions/ADR-0002-backend-and-frontend-stack.md)
+- [ADR-0003 — Persistence and data ownership](decisions/ADR-0003-persistence-and-data-ownership.md)
+- [ADR-0004 — Git synchronization and conflict handling](decisions/ADR-0004-git-sync-and-conflict-handling.md)
+- [ADR-0005 — Local security and credential handling](decisions/ADR-0005-local-security-and-credentials.md)
+
+**Current architecture status:** application shape accepted; remaining technical ADRs proposed and awaiting owner review.
