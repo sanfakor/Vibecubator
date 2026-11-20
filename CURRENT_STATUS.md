@@ -23,14 +23,14 @@ The canonical machine-readable state is [`docs/PROJECT_STATE.json`](docs/PROJECT
 ## Important findings
 
 - `MASTERPLAN.md` defines Phase 0 through Phase 6. Phase 6 — Pilot Projects and Product Maturity — has been restored to the proposed roadmap.
-- `PROJECT_MEMORY_SPECIFICATION.md` began at section 2.6 in the original main-branch file. Sections 1 and 2.1–2.5 have been reconstructed as PROPOSED / RECONSTRUCTED, not original text. Owner feedback is now incorporated as unapproved proposals: FULL lifecycle scope and AUTONOMOUS bounded AI execution. The complete specification still requires owner review and explicit approval.
+- `PROJECT_MEMORY_SPECIFICATION.md` began at section 2.6 in the original main-branch file. Sections 1 and 2.1–2.5 have been reconstructed as PROPOSED / RECONSTRUCTED, not original text. The project owner approved the FULL lifecycle scope and AUTONOMOUS bounded AI execution model on 2026-11-20. The reconstructed wording remains subject to review; this does not approve the technical stack or architecture.
 - `DOCUMENTATION_STRUCTURE.md` contains conflicting approval statements in the original main-branch version: Draft/Pending Approval and a later appended Approved statement.
 - The proposed governance and status standard on this branch require owner review.
 - The proposed technology stack remains unapproved until documented in ADRs.
 
 ## Next action
 
-Review and revise the reconstructed Project Memory specification, including the proposed FULL scope and AUTONOMOUS bounded AI execution model; explicitly approve or reject these proposals before treating them as authoritative. Then reconcile the remaining documentation conflicts and prepare the Phase 1 architecture and MVP package. Do not begin application implementation before the Phase 0 checklist is complete and the project owner approves the transition.
+Review and refine the reconstructed wording of the Project Memory specification. FULL scope and AUTONOMOUS bounded execution are approved. Then reconcile the remaining documentation conflicts and prepare the Phase 1 architecture and MVP package. Do not begin application implementation before the Phase 0 checklist is complete and the project owner approves the transition.
 
 ## Verification limitations
 
