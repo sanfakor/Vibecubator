@@ -1,10 +1,10 @@
 # VIBECUBATOR — Current Project Status
 
-**Last updated:** 2026-11-20T11:00:53Z
+**Last updated:** 2026-11-20T11:01:22Z
 **Overall status:** OPEN  
 **Current phase:** Phase 0 — Project Foundation  
 **Phase status:** OPEN  
-**Working branch:** `chore/phase-0-next-steps`
+**Working branch:** `docs/architecture-adrs`
 
 ## Current reality
 
