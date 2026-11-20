@@ -1,17 +1,17 @@
 # VIBECUBATOR — Project Memory Specification
 
-> **Reconstruction notice — PROPOSED / RECONSTRUCTED**
+> **Reconstruction notice — RECONSTRUCTED; scope and autonomy decisions APPROVED**
 >
-> Sections 1 and 2.1–2.5 were missing from the repository's original file and could not be recovered from Git history. The text below is a newly reconstructed draft based on the approved `MASTERPLAN.md` and the surviving sections 2.6–14. It is **not original source text and is not owner-approved**. Review, revise or reject it before treating this specification as authoritative.
+> Sections 1 and 2.1–2.5 were missing from the repository's original file and could not be recovered from Git history. The text below is a newly reconstructed draft based on the approved `MASTERPLAN.md` and the surviving sections 2.6–14. It is **not original source text**. The project owner has approved the FULL lifecycle scope and AUTONOMOUS bounded-execution model on 2026-11-20. Approval of those decisions does not imply approval of every reconstructed passage or of the complete specification.
 >
-> **Document status:** Draft — reconstructed opening and owner feedback proposals pending review
-> **Version:** 1.0 (reconstructed opening added on 2026-11-20; surviving sections retained)
+> **Document status:** Draft — reconstructed opening remains subject to review; scope and autonomy decisions approved
+> **Version:** 1.1 (owner approval of FULL scope and AUTONOMOUS bounded execution recorded on 2026-11-20)
 > **Project:** VIBECUBATOR
 > **Source basis:** `MASTERPLAN.md` (approved, version 1.0) and surviving content of this document from section 2.6 onward
 >
-> **Interpretation rule:** Reconstructed text and the scope/autonomy choices recorded below are proposals for review, not approved project decisions. In particular, they do not approve a technical stack or implementation architecture.
+> **Interpretation rule:** The FULL scope and AUTONOMOUS bounded-execution model are approved project decisions as of 2026-11-20. Reconstructed explanatory wording remains subject to review where explicitly indicated. This approval does not approve a technical stack or implementation architecture.
 >
-> **Owner feedback incorporated as proposals (2026-11-20):** Project Memory scope = `FULL`; AI autonomy = `AUTONOMOUS`. These choices were explicitly requested for incorporation as change proposals only. They remain unapproved until the project owner reviews and approves the revised specification.
+> **Owner decisions (2026-11-20):** Project Memory scope = `FULL` — **APPROVED**. AI autonomy = `AUTONOMOUS` — **APPROVED**, subject to the bounded-execution rules in this specification.
 
 ## 1. Purpose and Scope
 
@@ -27,7 +27,7 @@ The Project Memory supports the VIBECUBATOR principle:
 
 ### 1.2 Scope
 
-The proposed scope is `FULL`: the Project Memory is intended to maintain and make retrievable the complete body of knowledge required across the project lifecycle — from inception and planning through requirements, design, implementation, testing, release, operation, maintenance and evolution. It includes, at minimum:
+The approved scope is `FULL`: the Project Memory is intended to maintain and make retrievable the complete body of knowledge required across the project lifecycle — from inception and planning through requirements, design, implementation, testing, release, operation, maintenance and evolution. It includes, at minimum:
 
 - Project identity, vision, objectives and scope.
 - Requirements, constraints and acceptance criteria.
@@ -113,12 +113,12 @@ Changes that affect approved requirements, project fundamentals, architecture or
 
 Conflicts, uncertainty and missing evidence must be exposed rather than silently resolved by an AI system. Previous approved states and their history must remain recoverable in accordance with the controlled-evolution rules defined below.
 
-The proposed operating model is `AUTONOMOUS`: AI agents should be able to carry out assigned work end-to-end within an explicitly approved task scope, including analysis, planning, implementation, routine corrections, testing and evidence collection. Autonomy is bounded by approved requirements, permissions, budgets, security constraints, acceptance criteria and stop conditions. It does not grant agents authority to approve their own changes to project fundamentals, requirements, architecture, security policy, scope or other reserved decisions.
+The approved operating model is `AUTONOMOUS`: AI agents should be able to carry out assigned work end-to-end within an explicitly approved task scope, including analysis, planning, implementation, routine corrections, testing and evidence collection. Autonomy is bounded by approved requirements, permissions, budgets, security constraints, acceptance criteria and stop conditions. It does not grant agents authority to approve their own changes to project fundamentals, requirements, architecture, security policy, scope or other reserved decisions.
 
 
-### 2.9 Bounded Autonomous AI Execution — PROPOSED
+### 2.9 Bounded Autonomous AI Execution — APPROVED
 
-The target autonomy level is `AUTONOMOUS`, subject to owner approval. This is a proposal for the operating model, not an authorization for an agent to act outside the permissions and task scope actually granted in a given environment.
+The autonomy level `AUTONOMOUS` was approved by the project owner on 2026-11-20. This approval defines the target operating model; it is not an authorization for an agent to act outside the permissions and task scope actually granted in a given environment.
 
 Within an approved task, an AI agent should be able to independently:
 
