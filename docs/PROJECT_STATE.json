@@ -11,13 +11,13 @@
     "working_branch": "chore/project-state-standard",
     "last_verified_commit": "7f0449cefc33d2a8a4299ee3572314f4ceae642f"
   },
-  "updated_at": "2026-11-20T10:45:00+01:00",
+  "updated_at": "2026-11-20",
   "overall_status": "OPEN",
   "current_phase": "Phase 0 — Project Foundation",
   "phase_status": "OPEN",
   "next_action": {
     "id": "P0-06",
-    "description": "Review, revise and explicitly approve or reject the reconstructed opening of PROJECT_MEMORY_SPECIFICATION.md; then reconcile the complete specification and its acceptance criteria.",
+    "description": "Review the reconstructed Project Memory specification and owner-feedback proposals (FULL scope; AUTONOMOUS bounded AI execution), revise as needed, and explicitly approve or reject them.",
     "status": "IN_REVIEW",
     "owner_input_required": true
   },
@@ -83,7 +83,7 @@
     {
       "path": "PROJECT_MEMORY_SPECIFICATION.md",
       "classification": "PROPOSED",
-      "notes": "The original file began at section 2.6. Sections 1 and 2.1–2.5 have now been reconstructed as a clearly labeled, unapproved draft based on MASTERPLAN.md and surviving sections 2.6–14. Owner review is required; no original wording is claimed."
+      "notes": "Sections 1 and 2.1–2.5 reconstructed as unapproved draft. Owner feedback incorporated on 2026-11-20 as proposals: FULL lifecycle scope and AUTONOMOUS bounded AI execution. Neither choice nor the specification is approved; explicit owner review is pending."
     },
     {
       "path": "CURRENT_STATUS_AND_NEXT_STEPS.md",
@@ -162,7 +162,7 @@
     "Phase 0 technical architecture, Phase 1 requirements/backlog and explicit owner phase-transition approval remain outstanding."
   ],
   "open_decisions": [
-    "Review and approve, revise or reject the reconstructed sections 1 and 2.1–2.5 of PROJECT_MEMORY_SPECIFICATION.md; the original missing text was not recoverable from Git history.",
+    "Review and approve, revise or reject PROJECT_MEMORY_SPECIFICATION.md, including reconstructed sections 1 and 2.1–2.5 and the proposed FULL scope and AUTONOMOUS bounded AI execution model; none is approved yet.",
     "Confirm the intended approval status and authoritative revision of DOCUMENTATION_STRUCTURE.md.",
     "Approve or revise STATUS_STANDARD.md and AGENTS.md.",
     "Approve Phase 1 architecture through ADRs and define the MVP requirements/backlog.",
