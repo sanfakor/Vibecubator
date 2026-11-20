@@ -1,6 +1,6 @@
 # VIBECUBATOR — Current Project Status
 
-**Last verified:** 2026-11-20T10:40:46.982Z  
+**Last verified:** 2026-11-20T10:43:25.849Z  
 **Overall status:** OPEN  
 **Current phase:** Phase 0 — Project Foundation  
 **Phase status:** OPEN  
@@ -18,20 +18,20 @@ The canonical machine-readable state is [`docs/PROJECT_STATE.json`](docs/PROJECT
 - AI autonomy: **AUTONOMOUS**, bounded by approved task scope, permissions, acceptance criteria, safety limits and stop conditions.
 - Documentation governance baseline, status standard and AI operating rules were included in owner-merged PR #1.
 
-Approval of FULL and AUTONOMOUS does not approve the reconstructed wording in full, a technology stack, architecture ADRs, Phase 1 requirements or the Phase 0 → Phase 1 transition.
+These approvals do not approve every reconstructed passage, a technology stack, architecture ADRs, Phase 1 requirements or the Phase 0 → Phase 1 transition.
 
-## Current foundation work
+## Prepared for Phase 1 review
 
-- `PROJECT_MEMORY_SPECIFICATION.md`: owner decisions recorded; reconstructed opening remains subject to review.
-- `DOCUMENTATION_STRUCTURE.md`, `docs/STATUS_STANDARD.md` and `AGENTS.md`: approved governance baseline.
-- `docs/architecture/PHASE_1_ARCHITECTURE_OPTIONS.md`: architecture options and open decisions, not an approved architecture.
-- `docs/requirements/PHASE_1_MVP_REQUIREMENTS.md`: proposed MVP requirements and acceptance criteria.
-- `docs/planning/PHASE_1_BACKLOG.md`: proposed dependency-ordered work packages.
-- `docs/PHASE_0_CHECKLIST.md`: remaining exit criteria and owner gate.
+- [Architecture options](docs/architecture/PHASE_1_ARCHITECTURE_OPTIONS.md) — alternatives and decisions requiring owner input.
+- [MVP requirements](docs/requirements/PHASE_1_MVP_REQUIREMENTS.md) — proposed scope and acceptance criteria.
+- [Phase 1 backlog](docs/planning/PHASE_1_BACKLOG.md) — proposed dependency-ordered work packages.
+- [Phase 0 checklist](docs/PHASE_0_CHECKLIST.md) — remaining evidence and approval gates.
+
+The roadmap has been reconciled with the approved Masterplan and now explicitly contains Phases 0–6.
 
 ## Next action
 
-Review the architecture options and decide the unresolved technology, deployment, data and GitHub synchronization questions. Record the resulting choices in ADRs. The MVP requirements and backlog are prepared for review but must not be treated as approved implementation instructions yet.
+Review the architecture options and decide the unresolved technology, deployment, data and GitHub synchronization questions. Record approved choices in ADRs. Then review the MVP requirements and backlog. These planning documents remain proposals and are not implementation authorization.
 
 ## Implementation gate
 
