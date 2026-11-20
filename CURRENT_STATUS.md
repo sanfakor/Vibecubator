@@ -23,14 +23,14 @@ The canonical machine-readable state is [`docs/PROJECT_STATE.json`](docs/PROJECT
 ## Important findings
 
 - `MASTERPLAN.md` defines Phase 0 through Phase 6. Phase 6 — Pilot Projects and Product Maturity — has been restored to the proposed roadmap.
-- `PROJECT_MEMORY_SPECIFICATION.md` begins at section 2.6 in the inspected main-branch file. Its title, opening sections and sections 2.1–2.5 are missing; its completeness and approval cannot be assumed.
+- `PROJECT_MEMORY_SPECIFICATION.md` began at section 2.6 in the original main-branch file. Sections 1 and 2.1–2.5 have now been reconstructed on this working branch and are explicitly labeled PROPOSED / RECONSTRUCTED; they are not original text and still require owner review.
 - `DOCUMENTATION_STRUCTURE.md` contains conflicting approval statements in the original main-branch version: Draft/Pending Approval and a later appended Approved statement.
 - The proposed governance and status standard on this branch require owner review.
 - The proposed technology stack remains unapproved until documented in ADRs.
 
 ## Next action
 
-Recover or reconstruct the missing opening of the Project Memory specification, then reconcile the documentation conflicts and prepare the Phase 1 architecture and MVP package. Do not begin application implementation before the Phase 0 checklist is complete and the project owner approves the transition.
+Review, revise and explicitly approve or reject the reconstructed opening of the Project Memory specification, then reconcile the remaining documentation conflicts and prepare the Phase 1 architecture and MVP package. Do not begin application implementation before the Phase 0 checklist is complete and the project owner approves the transition.
 
 ## Verification limitations
 
