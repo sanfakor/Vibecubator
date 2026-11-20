@@ -48,6 +48,8 @@ Use `NOT_STARTED`, `READY`, `IN_PROGRESS`, `BLOCKED`, `IN_REVIEW`, `DONE`, `CANC
 | `UNKNOWN` | Not inspected or insufficient evidence exists. |
 | `DEPRECATED` | No longer recommended; retained for context. |
 | `SUPERSEDED` | Replaced by a newer authoritative item. |
+| `ARCHIVED` | Retained for historical reference but excluded from the active knowledge base. |
+| `REJECTED` | Explicitly evaluated and rejected; rationale remains traceable. |
 
 These classifications describe different dimensions and must not be treated as interchangeable. For example, a specification can be APPROVED and DOCUMENTED while the feature remains NOT_STARTED.
 
