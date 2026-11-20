@@ -5,12 +5,12 @@
 
 | ID | Exit criterion | Evidence required | Status |
 |---|---|---|---|
-| P0-01 | Complete repository inventory | Full file tree, branch/commit state, history review, code/config/test scan | OPEN |
-| P0-02 | Documentation authority approved | Canonical document map and conflict rules | DONE — documentation structure recorded as approved |
+| P0-01 | Complete repository inventory | Full file tree, branch/commit state, history review, code/config/test scan | DONE — complete tree (7 files), 15 commits and 2 branches inspected; see audit report |
+| P0-02 | Documentation authority approved | Canonical document map and conflict rules | IN_REVIEW — original document has contradictory approval statements; owner clarification required |
 | P0-03 | AI operating governance exists | Reviewed `AGENTS.md` | IN_REVIEW |
 | P0-04 | Current status is machine- and human-readable | Valid JSON state plus matching human status | IN_REVIEW — schema validation pending |
 | P0-05 | Masterplan remains authoritative | Owner-approved Masterplan 1.0; changes controlled | DONE — existing document marked approved |
-| P0-06 | Project Memory requirements reviewed | Specification approval or documented revision | OPEN |
+| P0-06 | Project Memory requirements reviewed | Specification approval or documented revision | BLOCKED — source file begins at section 2.6; missing opening content must be recovered or reconstructed |
 | P0-07 | Technical architecture sufficiently defined | Architecture proposal and approved ADRs for Phase 1 | OPEN |
 | P0-08 | Phase 1 MVP scope defined | Requirements, exclusions, measurable acceptance criteria | OPEN |
 | P0-09 | Phase 1 backlog actionable | Ordered tasks with IDs, dependencies, files/components, acceptance and verification | OPEN |
@@ -23,7 +23,7 @@ Phase 0 is COMPLETE only when P0-01 through P0-10 are DONE with linked evidence,
 
 ## Current assessment
 
-The initial remote inventory found a documentation-only repository tree and no executable application files. This is a bounded observation, not proof that every possible branch or historical commit lacks implementation. The complete audit remains P0-01.
+The complete non-truncated main-branch tree contains seven tracked files: six root-level Markdown documents and one legacy status document under docs/. The repository history contains 15 commits and two branches were returned. No application source, build/package configuration, test suite, CI workflow, license file, ADRs or Phase 1 requirements were present in the inspected main tree. The audit is recorded in [Repository Audit](audits/REPOSITORY_AUDIT_2026-11-20.md).
 
 ## Next action
 
