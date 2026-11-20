@@ -1,0 +1,300 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sanfakor/Vibecubator/blob/main/docs/PROJECT_STATE.schema.json",
+  "title": "VIBECUBATOR Project State",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project",
+    "repository",
+    "updated_at",
+    "overall_status",
+    "current_phase",
+    "phase_status",
+    "next_action",
+    "implementation",
+    "verification",
+    "blockers",
+    "open_decisions"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "project": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "purpose"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "repository": {
+      "type": "object",
+      "required": [
+        "url",
+        "default_branch",
+        "working_branch",
+        "last_verified_commit"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "default_branch": {
+          "type": "string"
+        },
+        "working_branch": {
+          "type": "string"
+        },
+        "last_verified_commit": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "overall_status": {
+      "enum": [
+        "NOT_STARTED",
+        "OPEN",
+        "BLOCKED",
+        "IN_REVIEW",
+        "COMPLETE",
+        "ON_HOLD",
+        "CANCELLED"
+      ]
+    },
+    "current_phase": {
+      "type": "string"
+    },
+    "phase_status": {
+      "enum": [
+        "NOT_STARTED",
+        "OPEN",
+        "BLOCKED",
+        "IN_REVIEW",
+        "COMPLETE",
+        "ON_HOLD",
+        "CANCELLED"
+      ]
+    },
+    "next_action": {
+      "type": "object",
+      "required": [
+        "id",
+        "description",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "NOT_STARTED",
+            "READY",
+            "IN_PROGRESS",
+            "BLOCKED",
+            "IN_REVIEW",
+            "DONE",
+            "CANCELLED"
+          ]
+        },
+        "owner_input_required": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "implementation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "area",
+          "classification",
+          "evidence"
+        ],
+        "properties": {
+          "area": {
+            "type": "string"
+          },
+          "classification": {
+            "enum": [
+              "PROPOSED",
+              "APPROVED",
+              "DOCUMENTED",
+              "IMPLEMENTED",
+              "PARTIALLY_IMPLEMENTED",
+              "VERIFIED",
+              "MISSING",
+              "UNKNOWN",
+              "DEPRECATED",
+              "SUPERSEDED",
+              "ARCHIVED",
+              "REJECTED"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "documentation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "classification"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "classification": {
+            "enum": [
+              "PROPOSED",
+              "APPROVED",
+              "DOCUMENTED",
+              "IMPLEMENTED",
+              "PARTIALLY_IMPLEMENTED",
+              "VERIFIED",
+              "MISSING",
+              "UNKNOWN",
+              "DEPRECATED",
+              "SUPERSEDED",
+              "ARCHIVED",
+              "REJECTED"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "repository_inventory",
+        "tests"
+      ],
+      "properties": {
+        "repository_inventory": {
+          "enum": [
+            "COMPLETE",
+            "PARTIAL",
+            "NOT_PERFORMED"
+          ]
+        },
+        "tests": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "status"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "status": {
+                "enum": [
+                  "PASSED",
+                  "FAILED",
+                  "NOT_RUN",
+                  "NOT_APPLICABLE"
+                ]
+              },
+              "evidence": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "open_decisions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "owner_approvals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "subject",
+          "status"
+        ],
+        "properties": {
+          "subject": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "PENDING",
+              "APPROVED",
+              "REJECTED"
+            ]
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
