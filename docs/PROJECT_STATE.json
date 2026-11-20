@@ -16,10 +16,10 @@
   "current_phase": "Phase 0 — Project Foundation",
   "phase_status": "OPEN",
   "next_action": {
-    "id": "P0-01",
-    "description": "Complete a full repository and history audit on the working branch; reconcile all documentation and gather evidence for each Phase 0 exit criterion.",
-    "status": "READY",
-    "owner_input_required": false
+    "id": "P0-06",
+    "description": "Review, revise and explicitly approve or reject the reconstructed opening of PROJECT_MEMORY_SPECIFICATION.md; then reconcile the complete specification and its acceptance criteria.",
+    "status": "IN_REVIEW",
+    "owner_input_required": true
   },
   "implementation": [
     {
@@ -82,8 +82,8 @@
     },
     {
       "path": "PROJECT_MEMORY_SPECIFICATION.md",
-      "classification": "PARTIALLY_IMPLEMENTED",
-      "notes": "Specification file exists but starts at section 2.6; opening sections/title/metadata are absent in the inspected main-branch blob. Content review is incomplete."
+      "classification": "PROPOSED",
+      "notes": "The original file began at section 2.6. Sections 1 and 2.1–2.5 have now been reconstructed as a clearly labeled, unapproved draft based on MASTERPLAN.md and surviving sections 2.6–14. Owner review is required; no original wording is claimed."
     },
     {
       "path": "CURRENT_STATUS_AND_NEXT_STEPS.md",
@@ -156,13 +156,13 @@
     ]
   },
   "blockers": [
-    "Project Memory specification is incomplete at its beginning: the original creation commit in Git history already starts at section 2.6, so its title, metadata and sections 1–2.5 cannot be recovered from repository history.",
+    "The reconstructed opening of PROJECT_MEMORY_SPECIFICATION.md is a proposal only and requires owner review and approval before the specification can serve as an approved requirements baseline.",
     "DOCUMENTATION_STRUCTURE.md contains contradictory status statements: Draft – Pending Approval in its metadata and section 12, followed by an appended Approved statement.",
     "The revised documentation governance, AI instructions and status standard on this branch require project-owner review before being treated as binding.",
     "Phase 0 technical architecture, Phase 1 requirements/backlog and explicit owner phase-transition approval remain outstanding."
   ],
   "open_decisions": [
-    "Git history contains only the original creation commit of PROJECT_MEMORY_SPECIFICATION.md, which already begins at section 2.6. Owner must supply the missing opening or approve a clearly labeled reconstruction.",
+    "Review and approve, revise or reject the reconstructed sections 1 and 2.1–2.5 of PROJECT_MEMORY_SPECIFICATION.md; the original missing text was not recoverable from Git history.",
     "Confirm the intended approval status and authoritative revision of DOCUMENTATION_STRUCTURE.md.",
     "Approve or revise STATUS_STANDARD.md and AGENTS.md.",
     "Approve Phase 1 architecture through ADRs and define the MVP requirements/backlog.",
