@@ -11,13 +11,13 @@
     "working_branch": "chore/phase-0-next-steps",
     "last_verified_commit": "bb565b7a42a6067c84a05abc73a01fbb82d77c41"
   },
-  "updated_at": "2026-11-20T10:44:23.835Z",
+  "updated_at": "2026-11-20T10:59:18Z",
   "overall_status": "OPEN",
   "current_phase": "Phase 0 — Project Foundation",
   "phase_status": "OPEN",
   "next_action": {
     "id": "P0-07",
-    "description": "Review the Phase 1 architecture options and decide the unresolved technology, deployment, data and GitHub synchronization questions; then approve the corresponding ADRs.",
+    "description": "Review and decide ADR-0002 to ADR-0005: backend/frontend stack, persistence and data ownership, Git synchronization/conflict handling, and local security/credential boundaries.",
     "status": "IN_REVIEW",
     "owner_input_required": true
   },
@@ -134,7 +134,33 @@
     },
     {
       "path": "docs/architecture/PHASE_1_ARCHITECTURE_OPTIONS.md",
-      "classification": "PROPOSED"
+      "classification": "PROPOSED",
+      "notes": "Owner selected hybrid application shape on 2026-11-20; detailed technology and integration decisions remain in ADRs."
+    },
+    {
+      "path": "docs/architecture/decisions/ADR-0001-application-shape-and-runtime.md",
+      "classification": "APPROVED",
+      "notes": "Owner-approved application shape: local web application first; desktop later remains optional."
+    },
+    {
+      "path": "docs/architecture/decisions/ADR-0002-backend-and-frontend-stack.md",
+      "classification": "PROPOSED",
+      "notes": "Candidate stack only; explicit owner approval required."
+    },
+    {
+      "path": "docs/architecture/decisions/ADR-0003-persistence-and-data-ownership.md",
+      "classification": "PROPOSED",
+      "notes": "Data ownership and SQLite direction require owner approval."
+    },
+    {
+      "path": "docs/architecture/decisions/ADR-0004-git-sync-and-conflict-handling.md",
+      "classification": "PROPOSED",
+      "notes": "Sync and conflict policy require owner approval."
+    },
+    {
+      "path": "docs/architecture/decisions/ADR-0005-local-security-and-credentials.md",
+      "classification": "PROPOSED",
+      "notes": "Security boundaries and credential strategy require owner approval."
     }
   ],
   "verification": {
@@ -174,13 +200,13 @@
   },
   "blockers": [
     "Reconstructed sections 1 and 2.1–2.5 of PROJECT_MEMORY_SPECIFICATION.md are not original source text; the approved FULL scope and AUTONOMOUS execution model do not constitute blanket approval of this wording.",
-    "Phase 1 architecture decisions remain open: technology stack, local deployment/runtime, data model boundaries, GitHub synchronization and conflict handling require approved ADRs.",
     "Phase 1 MVP requirements and backlog are prepared as proposals and require owner review before implementation.",
-    "Phase 0 cannot close until all checklist evidence is complete and the owner explicitly approves the transition."
+    "Phase 0 cannot close until all checklist evidence is complete and the owner explicitly approves the transition.",
+    "ADR-0001 application shape is accepted; ADR-0002 through ADR-0005 remain proposals and must be reviewed before Phase 1 implementation."
   ],
   "open_decisions": [
+    "Review and approve ADR-0002 (backend/frontend stack), ADR-0003 (persistence/data ownership), ADR-0004 (Git synchronization/conflict handling) and ADR-0005 (local security/credentials). ADR-0001 application shape is accepted.",
     "Review the reconstructed wording in PROJECT_MEMORY_SPECIFICATION.md; FULL lifecycle scope and AUTONOMOUS bounded execution are approved.",
-    "Confirm the Phase 1 architecture through ADRs: language/framework, frontend approach, persistence, local runtime, GitHub synchronization and conflict strategy.",
     "Review and approve the proposed Phase 1 MVP requirements, exclusions and measurable acceptance criteria.",
     "Review and approve the dependency-ordered Phase 1 backlog and its estimates/priorities.",
     "Explicitly approve the Phase 0 to Phase 1 transition after all exit criteria are evidenced."
@@ -190,7 +216,8 @@
     "Prematurely fixing the technology stack could constrain the product before architecture trade-offs are evaluated.",
     "GitHub synchronization and local persistence need explicit conflict, offline and recovery behavior to avoid divergent project records.",
     "Autonomous execution increases the importance of scoped permissions, audit trails, secret handling and explicit stop conditions.",
-    "No application code or automated test suite exists yet; implementation readiness must not be claimed."
+    "No application code or automated test suite exists yet; implementation readiness must not be claimed.",
+    "The accepted hybrid application shape still requires an approved backend/frontend stack, local service security model and explicit sync/data ownership decisions."
   ],
   "owner_approvals": [
     {
@@ -218,6 +245,12 @@
     {
       "subject": "Phase 1 architecture ADRs and MVP requirements/backlog",
       "status": "PENDING"
+    },
+    {
+      "subject": "Hybrid application shape: local web application first; desktop option later",
+      "status": "APPROVED",
+      "date": "2026-11-20",
+      "evidence": "Explicit owner decision in conversation; recorded in docs/architecture/decisions/ADR-0001-application-shape-and-runtime.md."
     }
   ]
 }
