@@ -683,10 +683,10 @@ The document itself must be version-controlled.
 
 Any approved changes must be traceable and must preserve the history of previous versions.
 
-Document Status: Draft – Pending Approval (owner feedback incorporated as unapproved proposals)
+Document Status: Partially approved — FULL scope and AUTONOMOUS bounded execution approved; reconstructed opening remains subject to review.
 
-Version: 1.1-proposal
+Version: 1.1
 
-Proposed changes: FULL Project Memory scope and AUTONOMOUS bounded AI execution, based on owner feedback dated 2026-11-20.
+Owner decisions recorded: FULL Project Memory scope and AUTONOMOUS bounded AI execution, approved 2026-11-20.
 
-Next Step: Owner review, revision and explicit approval or rejection of the reconstructed opening and incorporated scope/autonomy proposals.
+Next Step: Review and refine the reconstructed opening. Technical architecture, technology selection and Phase 1 implementation require separate decisions and approvals.
