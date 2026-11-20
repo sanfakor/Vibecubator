@@ -9,9 +9,9 @@
     "url": "https://github.com/sanfakor/Vibecubator",
     "default_branch": "main",
     "working_branch": "chore/phase-0-next-steps",
-    "last_verified_commit": "bb565b7a42a6067c84a05abc73a01fbb82d77c41"
+    "last_verified_commit": "d08b55bea357135512129a084f15328992f59e12"
   },
-  "updated_at": "2026-11-20T10:59:18Z",
+  "updated_at": "2026-11-20T11:00:53Z",
   "overall_status": "OPEN",
   "current_phase": "Phase 0 — Project Foundation",
   "phase_status": "OPEN",
@@ -161,6 +161,11 @@
       "path": "docs/architecture/decisions/ADR-0005-local-security-and-credentials.md",
       "classification": "PROPOSED",
       "notes": "Security boundaries and credential strategy require owner approval."
+    },
+    {
+      "path": "docs/architecture/decisions/README.md",
+      "classification": "DOCUMENTED",
+      "notes": "Index of ADR-0001 through ADR-0005 and their approval status."
     }
   ],
   "verification": {
@@ -195,6 +200,11 @@
         "name": "Application tests",
         "status": "NOT_APPLICABLE",
         "evidence": "No application source or automated test suite exists; no application tests were run."
+      },
+      {
+        "name": "Architecture ADR and status consistency",
+        "status": "PASSED",
+        "evidence": "The five ADR records, ADR index, architecture options, owner approval record, Phase 0 checklist and human-readable status were cross-checked on commit d08b55bea357135512129a084f15328992f59e12. ADR-0001 is ACCEPTED; ADR-0002 through ADR-0005 remain PROPOSED."
       }
     ]
   },
