@@ -9,7 +9,7 @@
     "url": "https://github.com/sanfakor/Vibecubator",
     "default_branch": "main",
     "working_branch": "chore/project-state-standard",
-    "last_verified_commit": "7f0449cefc33d2a8a4299ee3572314f4ceae642f"
+    "last_verified_commit": "494935d608a6e6c2458562f1426d726373844c3b"
   },
   "updated_at": "2026-11-20T10:25:00+01:00",
   "overall_status": "OPEN",
@@ -32,13 +32,13 @@
     },
     {
       "area": "Documentation governance",
-      "classification": "APPROVED",
+      "classification": "DOCUMENTED",
       "evidence": [
         "DOCUMENTATION_STRUCTURE.md",
         "docs/STATUS_STANDARD.md",
         "AGENTS.md"
       ],
-      "notes": "Documentation authority and AI operating rules established in this branch; pending review/merge."
+      "notes": "The existing documentation structure was previously marked approved; new status standard and AI agent operating rules are proposals on this branch and await owner review."
     },
     {
       "area": "Project Memory application",
@@ -96,11 +96,11 @@
     },
     {
       "path": "AGENTS.md",
-      "classification": "APPROVED"
+      "classification": "PROPOSED"
     },
     {
       "path": "docs/STATUS_STANDARD.md",
-      "classification": "APPROVED"
+      "classification": "PROPOSED"
     },
     {
       "path": "docs/PROJECT_STATE.json",
@@ -151,6 +151,10 @@
   "owner_approvals": [
     {
       "subject": "Phase 0 completion and authorization to begin Phase 1",
+      "status": "PENDING"
+    },
+    {
+      "subject": "Review and approve STATUS_STANDARD.md and AGENTS.md",
       "status": "PENDING"
     }
   ]
