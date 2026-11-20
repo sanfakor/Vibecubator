@@ -1,90 +1,32 @@
-# Phase 1 — Architecture Options and Open Decisions
+# Phase 1 — Architecture Options and Decision Disposition
 
-**Status:** PROPOSED — decision preparation only  
+**Status:** DECISIONS RECORDED — binding decisions are in ADR-0001 through ADR-0005  
 **Phase:** 0 (foundation)  
-**Decision authority:** Project owner  
-**Constraint:** No option in this document is an approved technology or architecture decision.
+**Decision authority:** Project owner
 
-## 1. Purpose
+## Purpose
+This document preserves the rationale for the Phase 1 architecture. It is an overview, not a substitute for the accepted ADRs.
 
-Prepare the architecture decisions needed to implement Phase 1 (Project Memory) without silently converting the Masterplan's initial technology proposal into a binding stack.
+## Accepted architecture baseline (2026-11-20)
+- Application shape: local web application first; optional desktop wrapper later (ADR-0001).
+- Backend/frontend: Python + FastAPI; React + TypeScript; versioned HTTP/JSON API over loopback (ADR-0002).
+- Data ownership: Git repository for canonical project artifacts; SQLite for local operational data, indexes and sync bookkeeping (ADR-0003).
+- Synchronization: user-triggered controlled operations, one configured branch, preview and explicit confirmation before commit, push or applying remote fast-forward changes (ADR-0004).
+- Security/platforms: Windows, macOS and Linux; native OS credential store; loopback-only service and installation-specific secret; fail closed if secure credential storage is unavailable (ADR-0005).
 
-The approved Masterplan requires a locally operated first application, provider-independent Project Memory, GitHub/Git as the versioned project record, SQLite as the local operational database/index, offline operation, conflict detection and no silent overwrites. Its listed language and framework choices remain proposals pending ADRs.
+## Architectural boundaries
+Git owns durable, reviewable project knowledge: specifications, structured state, phases, milestones, tasks, decisions and source code. SQLite owns operational projections and local-only state. Derived indexes must be rebuildable. Context packages are read models, not write authorities.
 
-## 2. Architecture drivers
+The MVP is single-user and locally operated. It does not include LAN exposure, cloud hosting, multi-user collaboration, desktop packaging, AI provider integration or autonomous code execution.
 
-1. Local-first operation; the user can work without an AI provider or continuous network connection.
-2. Durable, traceable project knowledge across sessions and AI providers.
-3. GitHub/Git remains the versioned source for approved project documents and source code.
-4. Local operational data supports fast queries without becoming an untraceable competing authority.
-5. Synchronization detects conflicts and never silently overwrites divergent changes.
-6. Clear separation between domain logic, persistence, UI and external integrations.
-7. Small Phase 1 delivery surface; defer AI provider adapters and autonomous code execution to later phases.
-8. Testability, maintainability, portability and secure handling of credentials.
+## Implementation-level details still to resolve
+- Concrete GitHub authentication flow and least-privilege permission manifest.
+- Canonical file layouts and detailed schemas for project/work/task/decision records.
+- Frontend build/test tooling and platform packaging after a vertical-slice proof of concept.
+- Linux Secret Service availability and locked/unavailable provider behavior.
+- Cross-platform service lifecycle, origin/CSRF controls and safe Git process invocation.
 
-## 3. Candidate deployment shapes
+These details must be resolved before the corresponding work packages. They do not reopen the accepted architecture baseline.
 
-| Option | Description | Advantages | Costs / risks |
-|---|---|---|---|
-| A — Local modular web application | Local backend service, browser UI, local database; modules separated by domain boundaries | Matches Masterplan's locally operated web application; clear API and test seams; UI/backend can evolve independently | Two runtime surfaces; local service lifecycle, ports and browser integration need care |
-| B — Single-process desktop application | Desktop shell with embedded UI and local domain/persistence layer | Integrated launch experience; potentially simpler distribution and local file access | Desktop packaging and platform-specific complexity; may constrain later browser-based access |
-| C — Headless local service first | Domain/API and persistence first; UI initially minimal or deferred | Strong testability and clean API foundation; reduces early UI effort | Delays user workflow validation; risks building abstractions before usability is tested |
-
-**Initial assessment:** Option A is the closest fit to the Masterplan's stated local web application direction, but it is not selected or approved. Option B should be reconsidered only if desktop integration becomes a demonstrated requirement. Option C may be useful as an implementation sequence inside A, not necessarily as the final product shape.
-
-## 4. Technology candidates (not decisions)
-
-The Masterplan's initial proposal lists Python, FastAPI, React, TypeScript, SQLite, Markdown, Git, GitHub and pytest, with Ollama/provider adapters later. Evaluate each choice against the architecture drivers rather than treating the list as approved.
-
-| Concern | Candidate direction | Decision still required |
-|---|---|---|
-| Backend | Python + FastAPI (Masterplan proposal) | Confirm language/framework and runtime support |
-| Frontend | React + TypeScript (Masterplan proposal) | Confirm SPA vs simpler server-rendered UI and packaging |
-| Local persistence | SQLite (Masterplan direction) | Define schema ownership, migrations, backup and recovery |
-| Project files | Markdown + structured JSON where appropriate | Define canonical formats and validation rules |
-| Version control | Git + GitHub integration | Define supported operations and authentication model |
-| Tests | pytest (Masterplan proposal) plus frontend tests if needed | Choose test layers and coverage gates |
-| AI integrations | Excluded from Phase 1 MVP | Preserve extension points without implementing adapters |
-
-## 5. Data and synchronization boundaries
-
-Proposed responsibility split for review:
-
-- **Git repository:** versioned, reviewable project specifications, approved decisions, source code and other durable project artifacts.
-- **Local SQLite database:** operational indexes, local UI state, task/query projections and synchronization metadata.
-- **Derived indexes/cache:** rebuildable from authoritative repository records and local operational records; never an independent authority.
-- **AI context package:** generated, task-scoped read model with provenance and status; never a write authority by itself.
-
-Synchronization must be explicit and observable. At minimum it needs remote/local revision identifiers, last successful sync, pending changes, conflict records and a user-visible resolution path. Do not define a last-write-wins policy without owner approval.
-
-## 6. ADRs required before Phase 1 implementation
-
-| ADR | Decision | Required alternatives / evaluation |
-|---|---|---|
-| ADR-0001 | Application shape and runtime | Local web app vs desktop shell vs headless-first; lifecycle, portability, usability |
-| ADR-0002 | Backend and frontend stack | Masterplan candidates vs alternatives; ecosystem, testability, maintenance |
-| ADR-0003 | Persistence and data ownership | SQLite schema, repository files, migrations, backups, derived indexes |
-| ADR-0004 | GitHub synchronization and conflict handling | Manual/explicit sync vs background sync; conflict representation and recovery |
-| ADR-0005 | Local security and credential handling | GitHub auth, secret storage, file-system boundaries, local network exposure |
-
-Each ADR must contain context, decision drivers, alternatives, consequences, status and owner approval. Until then, decisions remain OPEN.
-
-## 7. Recommended next action
-
-The owner reviews the candidate architecture and confirms the deployment shape, technology preferences and synchronization behavior. After that, prepare ADRs with concrete trade-offs and request explicit approval. No code or dependency selection should be based solely on this proposal.
-
-
-## 8. Owner decision — hybrid application shape
-
-On 2026-11-20, the project owner explicitly selected the **hybrid direction: local web application as the initial foundation, with a desktop application remaining a possible later delivery option**.
-
-This selection is recorded as accepted in [ADR-0001](decisions/ADR-0001-application-shape-and-runtime.md). It resolves the deployment-shape question only. It does not approve a specific backend/frontend stack, persistence model, synchronization policy, credential strategy or Phase 1 implementation.
-
-The remaining architecture decisions are prepared as proposals:
-
-- [ADR-0002 — Backend and frontend stack](decisions/ADR-0002-backend-and-frontend-stack.md)
-- [ADR-0003 — Persistence and data ownership](decisions/ADR-0003-persistence-and-data-ownership.md)
-- [ADR-0004 — Git synchronization and conflict handling](decisions/ADR-0004-git-sync-and-conflict-handling.md)
-- [ADR-0005 — Local security and credential handling](decisions/ADR-0005-local-security-and-credentials.md)
-
-**Current architecture status:** application shape accepted; remaining technical ADRs proposed and awaiting owner review.
+## Implementation gate
+All five ADRs are ACCEPTED for planning. Phase 1 implementation remains prohibited until Phase 0 is complete and the owner explicitly approves P0-11.

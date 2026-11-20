@@ -9,15 +9,15 @@
     "url": "https://github.com/sanfakor/Vibecubator",
     "default_branch": "main",
     "working_branch": "docs/architecture-adrs",
-    "last_verified_commit": "d08b55bea357135512129a084f15328992f59e12"
+    "last_verified_commit": "1be95d2784c53cdd88a48d1561e092297143fee6"
   },
-  "updated_at": "2026-11-20T11:01:22Z",
+  "updated_at": "2026-11-20T11:23:32Z",
   "overall_status": "OPEN",
   "current_phase": "Phase 0 — Project Foundation",
   "phase_status": "OPEN",
   "next_action": {
-    "id": "P0-07",
-    "description": "Review and decide ADR-0002 to ADR-0005: backend/frontend stack, persistence and data ownership, Git synchronization/conflict handling, and local security/credential boundaries.",
+    "id": "P0-11",
+    "description": "Owner reviews completed Phase 0 evidence and explicitly approves or declines the transition to Phase 1.",
     "status": "IN_REVIEW",
     "owner_input_required": true
   },
@@ -28,42 +28,62 @@
       "evidence": [
         "MASTERPLAN.md"
       ],
-      "notes": "Masterplan 1.0 is marked approved."
+      "notes": "Masterplan 1.0 remains approved."
     },
     {
-      "area": "Documentation governance",
+      "area": "Documentation governance and AI operating rules",
       "classification": "APPROVED",
       "evidence": [
         "DOCUMENTATION_STRUCTURE.md",
         "docs/STATUS_STANDARD.md",
         "AGENTS.md"
       ],
-      "notes": "Documentation governance baseline, status standard and AI operating rules were included in owner-merged PR #1 (merge commit 510a3e7). The documentation map is maintained in DOCUMENTATION_STRUCTURE.md."
+      "notes": "Approved baseline included in owner-merged PR #1."
     },
     {
-      "area": "Project Memory application",
-      "classification": "PROPOSED",
+      "area": "Project Memory specification",
+      "classification": "APPROVED",
       "evidence": [
-        "PROJECT_MEMORY_SPECIFICATION.md",
-        "MASTERPLAN.md"
+        "PROJECT_MEMORY_SPECIFICATION.md"
       ],
-      "notes": "FULL lifecycle scope and AUTONOMOUS bounded AI execution approved by owner on 2026-11-20; complete specification wording remains under review. No executable implementation verified."
+      "notes": "FULL scope, AUTONOMOUS bounded execution and reconstructed opening approved by owner 2026-11-20; reconstruction provenance retained."
+    },
+    {
+      "area": "Phase 1 architecture",
+      "classification": "APPROVED",
+      "evidence": [
+        "docs/architecture/decisions/ADR-0001-application-shape-and-runtime.md",
+        "docs/architecture/decisions/ADR-0002-backend-and-frontend-stack.md",
+        "docs/architecture/decisions/ADR-0003-persistence-and-data-ownership.md",
+        "docs/architecture/decisions/ADR-0004-git-sync-and-conflict-handling.md",
+        "docs/architecture/decisions/ADR-0005-local-security-and-credentials.md"
+      ],
+      "notes": "All five ADRs accepted for planning; implementation remains gated."
+    },
+    {
+      "area": "Phase 1 MVP scope and backlog",
+      "classification": "APPROVED",
+      "evidence": [
+        "docs/requirements/PHASE_1_MVP_REQUIREMENTS.md",
+        "docs/planning/PHASE_1_BACKLOG.md"
+      ],
+      "notes": "Includes tasks/milestones, single-user local install, Windows/macOS/Linux and portable import/export."
     },
     {
       "area": "Application source code",
       "classification": "MISSING",
       "evidence": [
-        "Repository tree at 7f0449cefc33d2a8a4299ee3572314f4ceae642f"
+        "docs/audits/PHASE_0_EXIT_REVIEW_2026-11-20.md"
       ],
-      "notes": "Inspected tree contains only Markdown documentation and docs directory; no source files observed."
+      "notes": "No application source in inspected branch tree."
     },
     {
-      "area": "Automated test suite",
+      "area": "Automated application test suite",
       "classification": "MISSING",
       "evidence": [
-        "Repository tree at 7f0449cefc33d2a8a4299ee3572314f4ceae642f"
+        "docs/audits/PHASE_0_EXIT_REVIEW_2026-11-20.md"
       ],
-      "notes": "No test files or test configuration observed in inspected tree; tests not run."
+      "notes": "No application test suite or runner; no app tests run."
     }
   ],
   "documentation": [
@@ -77,23 +97,12 @@
     },
     {
       "path": "DOCUMENTATION_STRUCTURE.md",
-      "classification": "APPROVED",
-      "notes": "Version 1.1 structure baseline included in owner-merged PR #1; status normalized in this follow-up."
+      "classification": "APPROVED"
     },
     {
       "path": "PROJECT_MEMORY_SPECIFICATION.md",
-      "classification": "PROPOSED",
-      "notes": "FULL scope and AUTONOMOUS bounded execution approved 2026-11-20. Reconstructed sections 1 and 2.1–2.5 remain non-original wording and subject to review; complete specification is not blanket-approved."
-    },
-    {
-      "path": "CURRENT_STATUS_AND_NEXT_STEPS.md",
-      "classification": "SUPERSEDED",
-      "notes": "Historical handover retained for traceability."
-    },
-    {
-      "path": "docs/CURRENT_STATUS.md",
-      "classification": "SUPERSEDED",
-      "notes": "Compatibility pointer to canonical status."
+      "classification": "APPROVED",
+      "notes": "Reconstructed opening approved 2026-11-20; provenance notice retained."
     },
     {
       "path": "AGENTS.md",
@@ -122,145 +131,158 @@
     {
       "path": "docs/audits/REPOSITORY_AUDIT_2026-11-20.md",
       "classification": "DOCUMENTED",
-      "notes": "Evidence-based inventory and documentation gap audit of the complete main-branch tree."
+      "notes": "Historical main-branch audit."
+    },
+    {
+      "path": "docs/audits/PHASE_0_EXIT_REVIEW_2026-11-20.md",
+      "classification": "DOCUMENTED"
     },
     {
       "path": "docs/requirements/PHASE_1_MVP_REQUIREMENTS.md",
-      "classification": "PROPOSED"
+      "classification": "APPROVED"
     },
     {
       "path": "docs/planning/PHASE_1_BACKLOG.md",
-      "classification": "PROPOSED"
+      "classification": "APPROVED"
     },
     {
       "path": "docs/architecture/PHASE_1_ARCHITECTURE_OPTIONS.md",
-      "classification": "PROPOSED",
-      "notes": "Owner selected hybrid application shape on 2026-11-20; detailed technology and integration decisions remain in ADRs."
+      "classification": "DOCUMENTED"
     },
     {
       "path": "docs/architecture/decisions/ADR-0001-application-shape-and-runtime.md",
-      "classification": "APPROVED",
-      "notes": "Owner-approved application shape: local web application first; desktop later remains optional."
+      "classification": "APPROVED"
     },
     {
       "path": "docs/architecture/decisions/ADR-0002-backend-and-frontend-stack.md",
-      "classification": "PROPOSED",
-      "notes": "Candidate stack only; explicit owner approval required."
+      "classification": "APPROVED"
     },
     {
       "path": "docs/architecture/decisions/ADR-0003-persistence-and-data-ownership.md",
-      "classification": "PROPOSED",
-      "notes": "Data ownership and SQLite direction require owner approval."
+      "classification": "APPROVED"
     },
     {
       "path": "docs/architecture/decisions/ADR-0004-git-sync-and-conflict-handling.md",
-      "classification": "PROPOSED",
-      "notes": "Sync and conflict policy require owner approval."
+      "classification": "APPROVED"
     },
     {
       "path": "docs/architecture/decisions/ADR-0005-local-security-and-credentials.md",
-      "classification": "PROPOSED",
-      "notes": "Security boundaries and credential strategy require owner approval."
+      "classification": "APPROVED"
     },
     {
       "path": "docs/architecture/decisions/README.md",
-      "classification": "DOCUMENTED",
-      "notes": "Index of ADR-0001 through ADR-0005 and their approval status."
+      "classification": "DOCUMENTED"
+    },
+    {
+      "path": "CURRENT_STATUS_AND_NEXT_STEPS.md",
+      "classification": "SUPERSEDED"
+    },
+    {
+      "path": "docs/CURRENT_STATUS.md",
+      "classification": "SUPERSEDED"
     }
   ],
   "verification": {
     "repository_inventory": "COMPLETE",
     "tests": [
       {
-        "name": "Repository inventory baseline",
+        "name": "Recursive working-branch inventory",
         "status": "PASSED",
-        "evidence": "Complete non-truncated main-branch tree inspected at 7f0449cefc33d2a8a4299ee3572314f4ceae642f; subsequent branch additions are recorded in the audit follow-up and canonical documentation inventory."
+        "evidence": "Complete non-truncated recursive tree at base commit 1be95d2784c53cdd88a48d1561e092297143fee6; 23 tracked files enumerated in Phase 0 exit review; no source/build/CI/test files."
       },
       {
-        "name": "JSON syntax",
+        "name": "Working-branch history review",
         "status": "PASSED",
-        "evidence": "docs/PROJECT_STATE.json parsed successfully during this update."
+        "evidence": "Six branch commits through audited head; parent chain and branch-specific documentation changes reviewed."
       },
       {
-        "name": "Project-state schema contract",
+        "name": "JSON syntax and schema contract",
         "status": "PASSED",
-        "evidence": "A local structural validator checked the current schema's declared types, required fields, enums, const, additionalProperties, array items, URI and date-time constraints."
+        "evidence": "Project state parses as JSON; required keys and declared structural contract checked against docs/PROJECT_STATE.schema.json."
       },
       {
         "name": "Human/machine status consistency",
         "status": "PASSED",
-        "evidence": "CURRENT_STATUS.md and docs/PHASE_0_CHECKLIST.md were reviewed against the canonical project state; phase and next action agree."
+        "evidence": "Root status, checklist and canonical JSON aligned to OPEN Phase 0 and P0-11."
       },
       {
-        "name": "Phase 1 planning artifact consistency",
+        "name": "Architecture and planning consistency",
         "status": "PASSED",
-        "evidence": "Architecture options, MVP requirements and backlog are all labeled PROPOSED and do not authorize implementation."
+        "evidence": "ADR-0001 through ADR-0005, ADR index, architecture overview, MVP requirements and backlog aligned with owner decisions."
       },
       {
         "name": "Application tests",
         "status": "NOT_APPLICABLE",
         "evidence": "No application source or automated test suite exists; no application tests were run."
-      },
-      {
-        "name": "Architecture ADR and status consistency",
-        "status": "PASSED",
-        "evidence": "The five ADR records, ADR index, architecture options, owner approval record, Phase 0 checklist and human-readable status were cross-checked on commit d08b55bea357135512129a084f15328992f59e12. ADR-0001 is ACCEPTED; ADR-0002 through ADR-0005 remain PROPOSED."
       }
     ]
   },
   "blockers": [
-    "Reconstructed sections 1 and 2.1–2.5 of PROJECT_MEMORY_SPECIFICATION.md are not original source text; the approved FULL scope and AUTONOMOUS execution model do not constitute blanket approval of this wording.",
-    "Phase 1 MVP requirements and backlog are prepared as proposals and require owner review before implementation.",
-    "Phase 0 cannot close until all checklist evidence is complete and the owner explicitly approves the transition.",
-    "ADR-0001 application shape is accepted; ADR-0002 through ADR-0005 remain proposals and must be reviewed before Phase 1 implementation."
+    "Phase 0 → Phase 1 transition awaits explicit owner approval (P0-11).",
+    "Phase 1 implementation is not authorized while Phase 0 remains OPEN."
   ],
   "open_decisions": [
-    "Review and approve ADR-0002 (backend/frontend stack), ADR-0003 (persistence/data ownership), ADR-0004 (Git synchronization/conflict handling) and ADR-0005 (local security/credentials). ADR-0001 application shape is accepted.",
-    "Review the reconstructed wording in PROJECT_MEMORY_SPECIFICATION.md; FULL lifecycle scope and AUTONOMOUS bounded execution are approved.",
-    "Review and approve the proposed Phase 1 MVP requirements, exclusions and measurable acceptance criteria.",
-    "Review and approve the dependency-ordered Phase 1 backlog and its estimates/priorities.",
-    "Explicitly approve the Phase 0 to Phase 1 transition after all exit criteria are evidenced."
+    "Select and security-review concrete GitHub authentication flow and least-privilege permission manifest before enabling remote writes.",
+    "Specify canonical file layouts and detailed schemas for project, phase, milestone, task and decision records before domain-model implementation.",
+    "Select frontend build/test tooling and platform packaging after P1-001 and vertical-slice proof of concept.",
+    "Verify Linux Secret Service availability; credential-dependent actions must fail closed without plaintext fallback.",
+    "Owner must explicitly approve or decline the Phase 0 → Phase 1 transition after reviewing evidence."
   ],
   "risks": [
-    "The reconstructed Project Memory opening may not match the unrecoverable original wording; its decisions are approved but the text remains reviewable.",
-    "Prematurely fixing the technology stack could constrain the product before architecture trade-offs are evaluated.",
-    "GitHub synchronization and local persistence need explicit conflict, offline and recovery behavior to avoid divergent project records.",
-    "Autonomous execution increases the importance of scoped permissions, audit trails, secret handling and explicit stop conditions.",
-    "No application code or automated test suite exists yet; implementation readiness must not be claimed.",
-    "The accepted hybrid application shape still requires an approved backend/frontend stack, local service security model and explicit sync/data ownership decisions."
+    "Project Memory opening is reconstructed rather than original source text; approval is recorded and provenance notice must remain.",
+    "Linux environments without usable Secret Service must not trigger plaintext credential fallback.",
+    "GitHub authentication and permission manifest remain implementation decisions; remote writes stay disabled until security review.",
+    "Single-branch controlled synchronization intentionally limits parallel workflows in MVP.",
+    "Git canonical records and SQLite projections require strict ownership and migration rules.",
+    "No application code or automated tests exist; implementation readiness must not be claimed."
   ],
   "owner_approvals": [
     {
       "subject": "Project Memory scope = FULL",
       "status": "APPROVED",
       "date": "2026-11-20",
-      "evidence": "Explicit owner approval in conversation; recorded in PROJECT_MEMORY_SPECIFICATION.md."
+      "evidence": "Explicit owner approval recorded in PROJECT_MEMORY_SPECIFICATION.md."
     },
     {
       "subject": "AI autonomy = AUTONOMOUS within bounded task scopes",
       "status": "APPROVED",
       "date": "2026-11-20",
-      "evidence": "Explicit owner approval in conversation; bounded execution rules retained in PROJECT_MEMORY_SPECIFICATION.md."
+      "evidence": "Explicit owner approval recorded in PROJECT_MEMORY_SPECIFICATION.md."
+    },
+    {
+      "subject": "Reconstructed Project Memory opening (sections 1 and 2.1–2.5)",
+      "status": "APPROVED",
+      "date": "2026-11-20",
+      "evidence": "Owner decision: Project-Memory-Rekonstruktion = approve; provenance remains explicitly marked reconstructed."
     },
     {
       "subject": "Documentation governance baseline, STATUS_STANDARD.md and AGENTS.md",
       "status": "APPROVED",
       "date": "2026-11-20",
-      "evidence": "Owner-merged Pull Request #1, merge commit 510a3e7a3aa558e0d3e7b124f59fe9baff08013a."
+      "evidence": "Owner-merged PR #1, merge commit 510a3e7a3aa558e0d3e7b124f59fe9baff08013a."
+    },
+    {
+      "subject": "Hybrid application shape",
+      "status": "APPROVED",
+      "date": "2026-11-20",
+      "evidence": "ADR-0001 accepted."
+    },
+    {
+      "subject": "Phase 1 technical architecture ADR-0002 through ADR-0005",
+      "status": "APPROVED",
+      "date": "2026-11-20",
+      "evidence": "Owner decisions recorded in accepted ADRs."
+    },
+    {
+      "subject": "Phase 1 MVP scope and backlog baseline",
+      "status": "APPROVED",
+      "date": "2026-11-20",
+      "evidence": "Tasks/milestones, single-user local installation, Windows/macOS/Linux and portable import/export approved."
     },
     {
       "subject": "Phase 0 completion and authorization to begin Phase 1",
-      "status": "PENDING"
-    },
-    {
-      "subject": "Phase 1 architecture ADRs and MVP requirements/backlog",
-      "status": "PENDING"
-    },
-    {
-      "subject": "Hybrid application shape: local web application first; desktop option later",
-      "status": "APPROVED",
-      "date": "2026-11-20",
-      "evidence": "Explicit owner decision in conversation; recorded in docs/architecture/decisions/ADR-0001-application-shape-and-runtime.md."
+      "status": "PENDING",
+      "evidence": "P0-11 requires explicit owner approval after review of Phase 0 evidence."
     }
   ]
 }

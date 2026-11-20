@@ -1,17 +1,17 @@
 # VIBECUBATOR — Project Memory Specification
 
-> **Reconstruction notice — RECONSTRUCTED; owner decisions recorded**
+> **Reconstruction notice — RECONSTRUCTED; opening approved by owner on 2026-11-20**
 >
-> Sections 1 and 2.1–2.5 were missing from the repository's original file and could not be recovered from Git history. The text below is a newly reconstructed draft based on the approved `MASTERPLAN.md` and the surviving sections 2.6–14. It is **not original source text**. The owner has approved the FULL lifecycle scope and AUTONOMOUS bounded-execution model on 2026-11-20. The reconstructed wording itself remains subject to review; do not treat every reconstructed passage as owner-approved.
+> Sections 1 and 2.1–2.5 were missing from the repository's original file and could not be recovered from Git history. The text below is a newly reconstructed opening based on the approved `MASTERPLAN.md` and surviving sections 2.6–14. It is **not original source text** and must never be represented as recovered original wording. On 2026-11-20 the owner explicitly approved sections 1 and 2.1–2.5 as the working specification, in addition to FULL lifecycle scope and AUTONOMOUS bounded execution.
 >
-> **Document status:** Partially approved — FULL scope and AUTONOMOUS execution approved; reconstructed opening remains under review
-> **Version:** 1.1 (owner decisions recorded on 2026-11-20; reconstructed opening remains reviewable)
+> **Document status:** APPROVED — reconstructed opening explicitly approved by owner; reconstruction provenance retained
+> **Version:** 1.2 (reconstructed opening and FULL/AUTONOMOUS decisions approved on 2026-11-20)
 > **Project:** VIBECUBATOR
 > **Source basis:** `MASTERPLAN.md` (approved, version 1.0) and surviving content of this document from section 2.6 onward
 >
-> **Interpretation rule:** FULL lifecycle scope and AUTONOMOUS bounded execution are approved project decisions. The reconstructed wording remains subject to review. These decisions do not approve a technical stack, implementation architecture or Phase 1 implementation.
+> **Interpretation rule:** The owner approved the reconstructed opening as the working specification while acknowledging that it is reconstructed, not original source text. FULL scope and AUTONOMOUS bounded execution are approved. This does not approve technical architecture or Phase 1 implementation.
 >
-> **Owner decisions (2026-11-20):** Project Memory scope = `FULL` — APPROVED. AI autonomy = `AUTONOMOUS` — APPROVED, subject to the bounded-execution rules in this specification. The owner approved these decisions explicitly; this does not constitute blanket approval of all reconstructed wording.
+> **Owner decisions (2026-11-20):** Project Memory scope = `FULL` — APPROVED. AI autonomy = `AUTONOMOUS` — APPROVED, subject to the bounded-execution rules in this specification. The owner explicitly approved the reconstructed opening in this document on 2026-11-20.
 
 ## 1. Purpose and Scope
 
@@ -684,10 +684,10 @@ The document itself must be version-controlled.
 
 Any approved changes must be traceable and must preserve the history of previous versions.
 
-Document Status: Partially approved — FULL scope and AUTONOMOUS bounded execution approved; reconstructed opening remains subject to review.
+Document Status: APPROVED — reconstructed sections 1 and 2.1–2.5 were explicitly approved by the owner on 2026-11-20. This text remains labeled reconstructed, not original source wording.
 
-Version: 1.1
+Version: 1.2
 
 Owner decisions recorded: FULL Project Memory scope and AUTONOMOUS bounded AI execution, approved 2026-11-20.
 
-Next Step: Review and refine the reconstructed opening. Technical architecture, technology selection and Phase 1 implementation require separate decisions and approvals.
+Approval record: The owner approved the reconstructed opening, FULL lifecycle scope and AUTONOMOUS bounded execution on 2026-11-20. Technical choices are governed by accepted ADRs. Phase 1 implementation remains prohibited until Phase 0 is complete and the owner explicitly approves the transition.

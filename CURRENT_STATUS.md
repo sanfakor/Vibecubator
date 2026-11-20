@@ -1,41 +1,40 @@
 # VIBECUBATOR — Current Project Status
 
-**Last updated:** 2026-11-20T11:01:22Z
+**Last updated:** 2026-11-20T11:23:32Z  
 **Overall status:** OPEN  
 **Current phase:** Phase 0 — Project Foundation  
 **Phase status:** OPEN  
 **Working branch:** `docs/architecture-adrs`
 
 ## Current reality
+The Phase 0 foundation and Phase 1 planning baseline have been reviewed and consolidated. ADR-0001 through ADR-0005 are accepted; the Project Memory reconstruction and Phase 1 MVP scope are approved. The complete recursive inventory of the working branch is recorded in `docs/audits/PHASE_0_EXIT_REVIEW_2026-11-20.md`.
 
-VIBECUBATOR remains in its foundation and planning phase. The owner-approved strategic direction is recorded in `MASTERPLAN.md`. The repository contains specifications and governance documentation, but no executable application implementation or automated test suite has been verified.
+No executable application or automated application test suite exists in the inspected repository tree. Phase 1 implementation remains prohibited until the owner explicitly approves the phase transition.
 
 The canonical machine-readable state is [`docs/PROJECT_STATE.json`](docs/PROJECT_STATE.json). This document is its human-readable projection. Both must be updated together.
 
 ## Owner-approved decisions
-
 - Project Memory scope: **FULL** — complete project lifecycle.
 - AI autonomy: **AUTONOMOUS**, bounded by approved task scope, permissions, acceptance criteria, safety limits and stop conditions.
-- Documentation governance baseline, status standard and AI operating rules were included in owner-merged PR #1.
-- Application shape: **Hybrid** — local web application first, desktop option later; accepted in ADR-0001 on 2026-11-20.
+- Project Memory reconstructed opening (sections 1 and 2.1–2.5): **APPROVED AS RECONSTRUCTED TEXT**; it is not represented as original recovered wording.
+- Application shape: local web application first; desktop option later (ADR-0001).
+- Backend/frontend: Python + FastAPI; React + TypeScript (ADR-0002).
+- Data ownership: Git for canonical project records; SQLite for local operational data and rebuildable projections (ADR-0003).
+- Git workflow: controlled, user-triggered operations on one configured branch; preview and explicit confirmation before commit, push or applying remote fast-forward changes (ADR-0004).
+- Security/platforms: Windows, macOS and Linux; OS-native credential store, loopback-only service and installation-specific secret (ADR-0005).
+- Phase 1 MVP: tasks and milestones included; single-user local installation; portable import/export included.
 
-These approvals do not approve every reconstructed passage, the backend/frontend stack, data ownership, synchronization/security policies, Phase 1 requirements or the Phase 0 → Phase 1 transition.
+## Phase 1 planning baseline
+- [ADR index](docs/architecture/decisions/README.md) — ADR-0001 through ADR-0005 accepted.
+- [MVP requirements](docs/requirements/PHASE_1_MVP_REQUIREMENTS.md) — approved scope and acceptance criteria.
+- [Phase 1 backlog](docs/planning/PHASE_1_BACKLOG.md) — 15 dependency-ordered work packages; effort estimates deferred.
+- [Phase 0 checklist](docs/PHASE_0_CHECKLIST.md) — P0-01 through P0-10 DONE; P0-11 OPEN.
 
-## Prepared for Phase 1 review
-
-- [Architecture options](docs/architecture/PHASE_1_ARCHITECTURE_OPTIONS.md) — hybrid application shape accepted; remaining technical decisions require owner input.
-- [ADR-0001](docs/architecture/decisions/ADR-0001-application-shape-and-runtime.md) — accepted local-web-first / desktop-later decision.
-- [ADR-0002](docs/architecture/decisions/ADR-0002-backend-and-frontend-stack.md) to [ADR-0005](docs/architecture/decisions/ADR-0005-local-security-and-credentials.md) — proposed stack, data, sync and security decisions.
-- [MVP requirements](docs/requirements/PHASE_1_MVP_REQUIREMENTS.md) — proposed scope and acceptance criteria.
-- [Phase 1 backlog](docs/planning/PHASE_1_BACKLOG.md) — proposed dependency-ordered work packages.
-- [Phase 0 checklist](docs/PHASE_0_CHECKLIST.md) — remaining evidence and approval gates.
-
-The roadmap has been reconciled with the approved Masterplan and now explicitly contains Phases 0–6.
+## Remaining implementation-level decisions
+The concrete GitHub authentication flow and permission manifest, canonical record schemas, frontend build/test tools, platform packaging and Linux credential-provider availability must be resolved before their corresponding work packages.
 
 ## Next action
-
-Review ADR-0002 through ADR-0005: backend/frontend stack, data ownership, Git synchronization/conflict handling and local security/credentials. Then review the MVP requirements and backlog. These planning documents remain proposals and are not implementation authorization.
+**P0-11 — Owner review:** review the Phase 0 evidence and explicitly approve or decline the Phase 0 → Phase 1 transition.
 
 ## Implementation gate
-
-Do not begin Phase 1 application implementation while Phase 0 is OPEN. Phase 0 can close only after every mandatory checklist criterion is evidenced and the owner explicitly approves the transition.
+Phase 0 remains OPEN until the owner explicitly approves P0-11. Do not begin Phase 1 implementation before that approval.

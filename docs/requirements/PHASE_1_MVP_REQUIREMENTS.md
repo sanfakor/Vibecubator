@@ -1,99 +1,85 @@
 # Phase 1 — Project Memory MVP Requirements
 
-**Status:** PROPOSED — owner review required  
-**Scope basis:** Approved Masterplan 1.0 and approved Project Memory decisions (FULL lifecycle scope; AUTONOMOUS bounded execution)  
-**Implementation gate:** Phase 1 implementation remains prohibited until Phase 0 is complete and the owner approves the transition.
+**Status:** APPROVED — owner decisions recorded 2026-11-20  
+**Scope basis:** Approved Masterplan, Project Memory specification and ADR-0001 through ADR-0005  
+**Implementation gate:** No Phase 1 implementation until Phase 0 is complete and the owner approves the transition.
 
 ## 1. Product outcome
+Deliver a useful, locally operated Project Memory foundation that lets a human manage projects, preserve structured knowledge, understand status, organize work and decisions, and synchronize versioned project records with GitHub without requiring an AI provider.
 
-Deliver a useful, locally operated Project Memory foundation that allows a human to create and manage projects, preserve structured project knowledge, understand current status, organize work and decisions, and synchronize versioned project records with GitHub without requiring an AI provider.
-
-FULL defines the intended lifecycle scope of VIBECUBATOR. Phase 1 is an incremental first delivery, not the implementation of the entire FULL scope.
+FULL defines the intended product lifecycle scope. Phase 1 is an incremental first delivery, not the entire product.
 
 ## 2. MVP principles
-
-- Local-first and usable without an AI provider.
-- GitHub/Git is the versioned source of approved project records.
-- Local persistence supports operational workflows and indexes.
+- Local-first; core workflows work without an AI provider or network.
+- Git is authoritative for approved, durable project records; SQLite supports operational workflows and rebuildable indexes.
 - No silent overwrite or implicit conflict resolution.
-- Approved decisions, proposals, working state and history remain distinguishable.
-- All material changes are traceable.
-- No autonomous agent execution is required for the Phase 1 MVP; the data model must not prevent later bounded autonomy.
-- Technology choices remain subject to approved ADRs.
+- Material changes and approvals are traceable.
+- No AI provider integration, autonomous code editing or command execution in this MVP.
+- Single-user local installation; Windows, macOS and Linux targets.
+- Platform-specific services use adapters; credential-dependent operations fail closed if secure OS storage is unavailable.
+- Architecture follows accepted ADR-0001 through ADR-0005.
 
 ## 3. In scope
-
-1. Create, open, edit, archive and list projects.
+1. Create, open, edit, archive and list multiple projects.
 2. Store project identity, purpose, status and key metadata.
-3. Organize project documents and retain repository-relative references.
-4. Represent phases, milestones and tasks with stable IDs, status, dependencies and acceptance criteria.
-5. Record decisions with status, rationale, date, source/evidence and supersession links.
-6. Present a concise project dashboard based on canonical project state.
-7. Maintain a local operational database and recoverable local data.
-8. Connect a project to a Git repository and display branch/commit/sync state.
-9. Support explicit initial GitHub synchronization for approved project files.
-10. Detect divergent changes and present conflicts without silent overwrites.
-11. Validate canonical structured project state against a versioned schema.
-12. Export/import a portable project state package with provenance.
+3. Organize documents and retain repository-relative references.
+4. Manage phases, milestones and tasks with stable IDs, status, dependencies, acceptance criteria and completion evidence.
+5. Record decisions with status, rationale, date, provenance and supersession links.
+6. Present a dashboard based on canonical project state.
+7. Maintain local operational persistence and recoverable local data.
+8. Connect a project to a Git repository and display branch, commit and sync state.
+9. Support controlled, user-triggered GitHub synchronization on one configured branch. Show diffs and require explicit confirmation before commit, push or applying remote fast-forward changes.
+10. Detect divergence and preserve both sides until explicit conflict resolution.
+11. Validate canonical structured project state against versioned schemas.
+12. Provide portable project export/import with stable IDs and provenance.
 
-## 4. Out of scope for Phase 1
-
+## 4. Out of scope
 - AI provider integrations (browser, local model or API).
-- Autonomous code editing or command execution.
-- Multi-user real-time collaboration and permission administration.
-- Cloud-hosted service or mandatory online account.
-- Full session manager, handover automation and recovery workflow (Phase 2).
-- Development engine, automated code changes and QA orchestration (Phase 4).
+- Autonomous code editing or arbitrary command execution.
+- Multi-user real-time collaboration or permission administration.
+- LAN-accessible or cloud-hosted service.
+- Desktop packaging (optional future delivery layer).
+- Full session manager and handover automation (Phase 2).
+- Development engine and QA orchestration (Phase 4).
 - Project template factory (Phase 5).
-- Public release packaging and final open-source license selection.
+- Public release packaging and final license selection.
 
 ## 5. Functional requirements
 
 | ID | Requirement | Acceptance evidence |
 |---|---|---|
-| FR-001 | Create and manage multiple projects | Create, edit, archive and reopen at least two independent test projects |
-| FR-002 | Maintain a canonical project identity and status | Each project has a stable ID and a validated current-state record |
-| FR-003 | Organize documents with type, status and source references | User can locate a document and distinguish approved, proposed and historical material |
-| FR-004 | Manage phases, milestones and tasks | Tasks support stable IDs, status, dependencies, acceptance criteria and completion evidence |
-| FR-005 | Record decisions and their lifecycle | Decision records preserve alternatives, rationale, approval state and supersession history |
-| FR-006 | Present current project status | Dashboard agrees with the canonical structured state and links to evidence |
-| FR-007 | Persist local operational data | Data survives application restart and documented backup/restore test |
-| FR-008 | Connect a project to a Git repository | Repository, branch and last-known commit are visible and validated |
-| FR-009 | Perform explicit GitHub synchronization | User can inspect changes and deliberately start a sync; result is recorded |
-| FR-010 | Detect synchronization conflicts | Divergent local/remote edits are surfaced and neither side is silently discarded |
-| FR-011 | Validate structured project records | Invalid records are rejected with actionable validation errors |
-| FR-012 | Export and import a portable project package | Export can be re-imported with stable IDs and provenance preserved |
+| FR-001 | Manage multiple projects | Create, edit, archive and reopen at least two independent projects |
+| FR-002 | Maintain canonical identity and status | Stable project ID and schema-validated current state |
+| FR-003 | Organize documents and provenance | Find documents and distinguish approved, proposed and historical records |
+| FR-004 | Manage phases, milestones and tasks | Stable IDs, dependencies, acceptance criteria, status and completion evidence |
+| FR-005 | Record decision lifecycle | Alternatives, rationale, approval, provenance and supersession traceable |
+| FR-006 | Present current status | Dashboard agrees with canonical state and links to evidence |
+| FR-007 | Persist operational data | Data survives restart and backup/restore test |
+| FR-008 | Connect Git repository | Repository, configured branch and last-known commit visible |
+| FR-009 | Controlled GitHub synchronization | User-triggered fetch, file-level preview, confirmed commit, separately confirmed push and recorded outcome |
+| FR-010 | Detect conflicts | Divergent edits surfaced; neither side silently discarded |
+| FR-011 | Validate structured records | Invalid records rejected with actionable diagnostics |
+| FR-012 | Portable import/export | Round trip preserves IDs, statuses, relationships and provenance |
 
 ## 6. Non-functional requirements
+- **NFR-001 Reliability:** interrupted operations do not silently corrupt canonical records.
+- **NFR-002 Traceability:** material edits, approvals, sync operations and resolutions are attributable and timestamped.
+- **NFR-003 Security:** credentials never enter repository artifacts, plaintext SQLite fields, logs or exports.
+- **NFR-004 Privacy:** local operation is default; no project content is sent to an AI provider in Phase 1.
+- **NFR-005 Portability:** documented formats and stable IDs.
+- **NFR-006 Recoverability:** backup and restore documented and tested.
+- **NFR-007 Usability:** core workflows do not require raw JSON editing.
+- **NFR-008 Maintainability:** domain logic separated from UI, persistence and integrations.
+- **NFR-009 Verification:** every requirement has a testable check; unexecuted tests are never passed.
+- **NFR-010 Offline behavior:** local project/task workflows remain available offline.
+- **NFR-011 Platform support:** Windows, macOS and Linux; platform integrations behind adapters.
+- **NFR-012 Credential safety:** native OS credential store only; fail closed without plaintext fallback.
+- **NFR-013 Local service boundary:** loopback-only binding, installation-specific secret and origin/CSRF protections.
 
-- **NFR-001 Reliability:** interrupted operations must not leave silently corrupted canonical records.
-- **NFR-002 Traceability:** material edits, approvals, sync operations and conflict resolutions are attributable and timestamped.
-- **NFR-003 Security:** credentials are never stored in project files or committed; access is limited to the required repository scope.
-- **NFR-004 Privacy:** local operation is the default; no project content is sent to an AI provider in Phase 1.
-- **NFR-005 Portability:** project records use documented, exportable formats and stable identifiers.
-- **NFR-006 Recoverability:** backup and restore behavior is documented and tested.
-- **NFR-007 Usability:** core project/task/document workflows can be completed without editing raw JSON.
-- **NFR-008 Maintainability:** domain logic is separated from UI, persistence and GitHub integration at defined interfaces.
-- **NFR-009 Verification:** each requirement has a testable acceptance check; unexecuted tests are never marked passed.
-- **NFR-010 Offline behavior:** core local project and task workflows remain usable without network access; remote sync is clearly unavailable while offline.
+## 7. Owner decisions recorded
+The owner approved tasks and milestones in the first MVP, a single-user local installation, cross-platform targets and portable import/export on 2026-11-20. Controlled Git actions and the single-branch policy are recorded in ADR-0004.
 
-## 7. Proposed acceptance gate for Phase 1
+The concrete GitHub authentication flow, permission manifest, canonical file layouts, frontend tooling and platform packaging are implementation details. They must be resolved and reviewed before their work packages are implemented.
 
-Phase 1 is ready for acceptance only when:
-1. All in-scope FRs are implemented and their acceptance checks pass.
-2. Data survives restart and a backup/restore cycle.
-3. GitHub sync is explicit, traceable and conflict-safe in tested scenarios.
-4. Invalid state records are rejected with useful diagnostics.
-5. Documentation, setup instructions and a complete handover are updated.
-6. Known limitations and security considerations are recorded.
-7. The project owner reviews the evidence and explicitly accepts the phase.
-
-## 8. Open questions for owner review
-
-- Is the proposed Phase 1 MVP boundary correct, especially explicit GitHub sync and portable import/export?
-- Should task and milestone management be fully included in the first usable release or staged after project/document/decision management?
-- What is the expected GitHub authentication method and repository permission boundary?
-- Is a single-user local installation the intended first deployment target?
-- Which project artifacts should be canonical files in Git versus operational records in SQLite?
-
-No requirement in this document is an approved implementation instruction until reviewed and approved by the project owner.
+## 8. Acceptance and implementation gate
+Phase 1 is ready for acceptance only when all in-scope requirements pass, data survives restart and backup/restore, Git sync is conflict-safe, invalid records are rejected, documentation and handover are complete, and the owner accepts the evidence. This document is a planning authority, not implementation authorization.
