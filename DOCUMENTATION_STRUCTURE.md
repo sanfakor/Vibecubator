@@ -32,7 +32,7 @@ The following precedence applies by information domain, not as a blanket ranking
 | Documentation responsibilities | `DOCUMENTATION_STRUCTURE.md` |
 | Persistent knowledge requirements | `PROJECT_MEMORY_SPECIFICATION.md` |
 | Phase exit criteria | `docs/PHASE_0_CHECKLIST.md` and later phase-specific criteria |
-| Technical decisions | Approved ADRs in `docs/architecture/decisions/` |
+| Technical decisions | Approved ADRs in `docs/architecture/decisions/`; proposals remain explicitly unapproved |
 | Session-level history and handover | Individual records in `docs/sessions/` when introduced |
 
 Actual source code, Git history and executed test output are evidence about implementation. They do not silently amend approved requirements or decisions.
@@ -58,7 +58,13 @@ Vibecubator/
     ├── PHASE_0_CHECKLIST.md
     ├── CURRENT_STATUS.md               # compatibility pointer
     ├── architecture/
-    │   └── PHASE_1_ARCHITECTURE_OPTIONS.md
+    │   ├── PHASE_1_ARCHITECTURE_OPTIONS.md
+    │   └── decisions/
+    │       ├── ADR-0001-application-shape-and-runtime.md
+    │       ├── ADR-0002-backend-and-frontend-stack.md
+    │       ├── ADR-0003-persistence-and-data-ownership.md
+    │       ├── ADR-0004-git-sync-and-conflict-handling.md
+    │       └── ADR-0005-local-security-and-credentials.md
     ├── audits/
     │   └── REPOSITORY_AUDIT_2026-11-20.md
     ├── planning/
